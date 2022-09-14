@@ -45,7 +45,7 @@
         <i class="fas fa-bars"></i>
       </button>
 		<div class="logo" style="margin-top: 1px;">
-			<a href="#">
+			<a href="index.html">
 			<img src="images/header/Mainlogo.jpg" alt="logo">
 			</a>
 		</div>
@@ -152,7 +152,8 @@
 				</ul>
 			 </div>
 			 <!--#Home-->
-			 <div class="login popup"><a href="signin.html" class="LoginSignUpLink">Login / SignUp</a> </div>
+			 <div class="login popup" id="preNavLogin"><a href="signin.html" class="LoginSignUpLink" >Login / SignUp</a> </div>
+			 <div class="login popup" id="addProfile"></div>
 			 <!-- <div class="login popup"  onclick="signin()"> -->
 				
 				<!-- <img src="images/header/u-icon.png" title="" alt=""> -->
@@ -187,7 +188,7 @@
     </nav>
     <div id="wrapper">
       <!-- Sidebar -->
-		  <ul class="sidebar navbar-nav">
+		  <ul class="sidebar navbar-nav" id='hideUserProfile'>
 			<li class="nav-item active">
 			<a href="index.html"><img src="images/menu-icon/Homeicon.png" title="" alt=""> <div class="fos" id="foo">Home</div></a></li>
 			<li><a href="listing.html"><img src="images/menu-icon/Categoryicon.png" title="" alt=""><div class="fos" id="foo1"> Listing </div> </a></li>
@@ -205,7 +206,7 @@
 			
 		  </ul>
 		<div id="content-wrapper">
-			<div class="container-fluid">
+			<div class="container-fluid" id='hideUserProfile'>
 			 <!-- Banner -->
 				<div class="row">
 					<div class="advertisment-banner col-md-12">
@@ -215,7 +216,7 @@
 				</div>	
 				  <!-- Banner Area-->
 	<div id="myBtnContainer">
-		<div class="col-md-10 p-left">
+		<div class="col-md-10 p-left" id='hideUserProfile'>
 			<button class="btn active" onclick="filterSelection('all')">  all</button>
 			<button class="btn" onclick="filterSelection('Places')"> Places & Events</button>
 			<button class="btn" onclick="filterSelection('Real')"> Real Estate</button>
@@ -223,12 +224,12 @@
 			<button class="btn" onclick="filterSelection('Electronic')"> Electronic</button>
 			<button class="btn" onclick="filterSelection('Others')"> Others</button>
 		</div>
-		<div class="text-right radar col-md-2 p-right">
+		<div class="text-right radar col-md-2 p-right" id='hideUserProfile'>
 			<a href="radar.html"><img src="images/icon/reader.png" alt="reader">Radar Scan</a>
 		</div>
 		<div class="clearfix"></div>
 	</div>
-	<div class="tabby">
+	<div class="tabby" id='hideUserProfile'>
 		<div class="htitle col-md-6">
 		Latest Listing
 		</div>
@@ -236,7 +237,7 @@
 		<a href="#">Show More</a>
 	</div>
 	<div class="clearfix"></div>
-	<div class="filterDiv Places">
+	<div class="filterDiv Places" id='hideUserProfile'>
 	  <div class="col-md-3 col-xs-12 ">
 		<div class="box">
 			<div class="box-img">
@@ -260,7 +261,7 @@
 		</div>
 		</div>
 	</div>
-	<div class="filterDiv Cars Real">
+	<div class="filterDiv Cars Real" id='hideUserProfile'>
 		<div class="col-md-3 col-xs-12 ">
 			<div class="box">
 				<div class="box-img">
@@ -1266,7 +1267,7 @@
 							<a href="#">Term & Conditions </a>
 							<a href="#">Sitemap  </a>| 
 							<a href="#">Tags  </a>| 
-							<a href="#">Blog</a>
+							<a href="#" onclick="socialMediaLogoutUser()">Logout</a>
 						</div>
 						
 				</div>
@@ -1307,6 +1308,15 @@
     <script src="assets/owlcarousel/owl.carousel.js"></script>
 	 <script src="assets/vendors/highlight.js"></script>
     <script src="assets/js/app.js"></script>
+
+	<!-- Integratin scripts -->
+	<script src="js/Integration/loggedInUser.js"></script>
+	<script src="js/Integration/index.js"></script>
+	<script src="js/Integration/facebookLogin.js"></script>
+	<script src="js/Integration/githubLogin.js"></script>
+	<script src="js/Integration/googleLogin.js"></script>
+	<script src="js/Integration/socialMediaLogout.js"></script>
+	<script src="js/Integration/socialMediaProfile.js"></script>
 	
   </body>
 

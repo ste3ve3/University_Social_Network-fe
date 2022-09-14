@@ -1616,6 +1616,7 @@ padding: 50px;
   
   }
 
+
 .LoginSignUpLink:hover{
  color: blue;
 }
@@ -1628,7 +1629,9 @@ padding: 50px;
   align-items: center;
 }
 .bg-form {
-background:#eff5fc;
+background: white;
+box-shadow: 0.1px 1px 13px grey;
+border-radius: 5px;
 padding:30px;
 width:100%;
 }
@@ -1732,7 +1735,6 @@ width: 100%;
 padding: 10px;
 margin-bottom: 40px;
 color: #34333c;
-text-transform: capitalize;
 font-size: 14px;
 font-weight: 500;
 }
@@ -1769,13 +1771,15 @@ font-size: 14px;
 text-transform: capitalize;
 }
 .forgets {
-margin-top:30px;
+margin-top:10px;
+margin-bottom:40px;
 }
 .forgets a{
 font-size:14px;
 font-weight:500;
 text-transform:capitalize;
-color:#898989;
+color:blue;
+text-decoration: underline;
 }
 .sinup .input-container label{
 color: #34333c;
@@ -2397,10 +2401,23 @@ font-weight: 100;
 position: relative;
 display: inline-block;
 cursor: pointer;
+
 -webkit-user-select: none;
 -moz-user-select: none;
 -ms-user-select: none;
 user-select: none;
+}
+
+#addProfile{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  margin-top: -10px;
+  height: 0px;
+}
+
+#preNavLogin{
+  
 }
 
 /****************
@@ -3137,3 +3154,83 @@ animation-delay: -0.16s;
 width:95%;
 margin:0 auto;
 }
+
+
+
+div.loginSocialMedia{
+  /* border-bottom: 1px solid #a6a6a6;
+  margin-top: 40px; */
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+div.loginSocialMedia p{
+  color: var(--myColor);
+  font-weight: bold;
+}
+
+div.loginS{
+  padding: 0 6vw;
+}
+
+div.loginS a{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid grey;
+  width: 100%;
+  padding: 4px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: black;
+  transition: all 1s;
+}
+
+div.loginS a:hover{
+  background-color: #e2e2e2;
+}
+
+div.loginS a img{
+  width: 30px;   
+}
+
+div.loginParag p{
+  color: unset;
+  font-weight: bold;
+}
+
+
+
+div.verifiedMessage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+div.verifiedMessage img{
+  width: 100%;
+}
+
+div.verifiedMessageImage {
+  width: 20%;
+  margin: auto;
+}
+
+div.verifiedMessage h4{
+  text-align: center;
+  margin-top: 40px;
+}
+
+div.verifiedMessage p{
+  text-align: center;
+  margin-top: 20px;
+}
+
+a.emailLogin{
+  color: blue;
+}
+

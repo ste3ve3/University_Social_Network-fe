@@ -13,7 +13,7 @@
 <!-- Favicon -->
 	<link href="images/header/fav.jpg" rel="shortcut icon" type="image/x-icon"/>
 
-    <title>University Social Network | Login </title>
+    <title>University Social Network | Sign Up </title>
 
     <!-- Bootstrap core CSS-->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -45,7 +45,7 @@
         <i class="fas fa-bars"></i>
       </button>
 		<div class="logo" style="margin-top: 1px;">
-			<a href="#">
+			<a href="index.html">
 			<img src="images/header/Mainlogo.jpg" alt="logo">
 			</a>
 		</div>
@@ -152,32 +152,8 @@
 				</ul>
 			 </div>
 			 <!--#Home-->
-			 <div class="login popup"  onclick="signin()">
-				<div>hi</div>
-				<!-- <img src="images/header/u-icon.png" title="" alt=""> -->
-				<div class="popuptext1" id="signin">
-							<div class="notfication-details">
-								<div class="notification-info">
-									<a href="my_profile_account.html" >Profile </a>
-								
-								</div>
-							</div>
-							<div class="notfication-details">
-								<div class="notification-info">
-									<a href="my_profile_dashboard.html">Dashboard</a>
-								</div>
-							</div>
-							<div class="notfication-details">
-								<div class="notification-info">
-									<a href="my_profile_view_detail.html">Profile Detail</a>
-								</div>
-							</div>
-							<div class="notfication-details">
-								<div class="notification-info">
-									<a href="signin.html" >Sign In</a>
-								</div><!--notification-info -->
-							</div>
-						 </div>
+			 <div class="login popup" id="preNavLogin"><a href="signin.html" class="LoginSignUpLink" >Login / SignUp</a> </div>
+			 <div class="login popup" id="addProfile"></div>
 				
 			
 				
@@ -225,8 +201,9 @@
 									<div class="sform">
 										<h1>Sign Up</h1>
 										<!-- <span>Hello there! Sign up and start managing your item.</span> -->
+										<div id="signupMessage" style="margin-top: 50px;"></div>
 										<form class="sinup" action="#" id="signupForm">
-											<div id="signupMessage">Hi</div>
+											
 											<div class="input-container">
 											<input class="input-field" type="text" placeholder="First name*" name="name" id="firstName">
 											
@@ -326,7 +303,13 @@
 
 	<!-- Integratin scripts -->
 	<script src="js/Integration/signUp.js"></script>
-	
+	<script src="js/Integration/loggedInUser.js"></script>
+	<script src="js/Integration/index.js"></script>
+	<script src="js/Integration/facebookLogin.js"></script>
+	<script src="js/Integration/githubLogin.js"></script>
+	<script src="js/Integration/googleLogin.js"></script>
+	<script src="js/Integration/socialMediaLogout.js"></script>
+	<script src="js/Integration/socialMediaProfile.js"></script>
   </body>
 
 
