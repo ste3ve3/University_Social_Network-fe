@@ -13,7 +13,7 @@
 <!-- Favicon -->
 	<link href="images/header/fav.jpg" rel="shortcut icon" type="image/x-icon"/>
 
-    <title>University Social Network | Login </title>
+    <title>University Social Network | Sign Up </title>
 
     <!-- Bootstrap core CSS-->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -37,172 +37,32 @@
 
   <body id="page-top">
 
-    <nav class="navbar navbar-expand-md navbar-light fixed-top sticky-top nav-menu">
+	<nav class="navbar navbar-expand-md navbar-light fixed-top sticky-top nav-menu">
 
-     <div class="col-md-2 col-xs-12 p-left  p-right">
-
-      <button  class="btn btn-link btn-sm text-white order-1 order-sm-0"  id="sidebarToggle" >
-        <i class="fas fa-bars"></i>
-      </button>
-		<div class="logo" style="margin-top: 1px;">
-			<a href="#">
-			<img src="images/header/Mainlogo.jpg" alt="logo">
-			</a>
-		</div>
-	</div>
-      <!-- Navbar -->
-		<div class="col-md-5 col-xs-12 p-left  p-right">
-			 <div class="searching">
-				<form>
-				<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-				<input type="text" name="search" placeholder="Search Places, Events, House, Shop, Bike, Car, Mobile etc...">
-				</form>
-			</div>
-		</div>
-			<div class="col-md-5 col-xs-12 p-left p-right">
-			 <div class="add-listing">
-				<a href="upload.html">
-				<img src="images/header/plus-ico.png" alt="">
-				Add Listing</a>
-			 </div>
-			 <div class="home">
-				<ul>
-					<li>
-						<a  href="index.html"><img src="images/header/home.png" alt="" title="" >
-							<span>1</span>
-						</a>
-					</li>
-					<li class="popup"  onclick="myFunctionmsg()">
-						<img src="images/header/mgs.png" alt="" title="" >
-						<span>4</span>
-						<div class="popuptext" id="message">
-							<div class="notfication-details">
-								<div class="noty-user-img">
-									<img src="images/resources/ny-img1.png" alt="">
-								</div>
-								<div class="notification-info">
-									<h5><a href="message.html">Jassica William</a>
-									Lorem ipsum dolor sit amet, 
-									consectetur adipisicing elit,</h5>
-									<p>2 min ago</p>
-								</div><!--notification-info -->
-							</div>
-							<div class="notfication-details">
-								<div class="noty-user-img">
-									<img src="images/resources/ny-img1.png" alt="">
-								</div>
-								<div class="notification-info">
-									<h5><a href="message.html">Jassica William</a>
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-									.</h5>
-									<p>2 min ago</p>
-								</div><!--notification-info -->
-							</div>
-
-							<div class="notfication-details">
-								<div class="noty-user-img">
-									<img src="images/resources/ny-img1.png" alt="">
-								</div>
-								<div class="notification-info">
-									<h5><a href="message.html">Jassica William</a> 
-									Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-									</h5>
-									<p>2 min ago</p>
-								</div><!--notification-info -->
-							</div>
-							
-						 </div>
+		<div class="col-md-2 col-xs-12 p-left  p-right">
+   
+		 <button  class="btn btn-link btn-sm text-white order-1 order-sm-0"  id="sidebarToggle" >
+		   <i class="fas fa-bars"></i>
+		 </button>
+		   <div class="logo" style="margin-top: 1px;">
+			   <a href="index.html">
+			   <img src="images/header/Mainlogo.jpg" alt="logo">
+			   </a>
+		   </div>
+	   </div>
+		 <!-- Navbar -->
+		   <div class="col-md-5 col-xs-12 p-left  p-right">
+		   </div>
+			   <div class="col-md-5 col-xs-12 p-left p-right">
 				
-					</li>
-					<li class="popup"  onclick="myFunctionicon()">
-						<img src="images/header/notification.png" alt="" title="" >
-					<span>2</span>
-					<div class="popuptext" id="icon">
-							<div class="notfication-details">
-								<div class="noty-user-img">
-									<img src="images/resources/ny-img1.png" alt="">
-								</div>
-								<div class="notification-info">
-									<h3><a href="message.html">Jassica William</a> Comment on your project.</h3>
-									<p>2 min ago</p>
-								</div><!--notification-info -->
-							</div>
-							<div class="notfication-details">
-								<div class="noty-user-img">
-									<img src="images/resources/ny-img1.png" alt="">
-								</div>
-								<div class="notification-info">
-									<h3><a href="message.html">Jassica William</a> Comment on your project.</h3>
-									<p>2 min ago</p>
-								</div><!--notification-info -->
-							</div>
-							<div class="notfication-details">
-								<div class="noty-user-img">
-									<img src="images/resources/ny-img1.png" alt="">
-								</div>
-								<div class="notification-info">
-									<h3><a href="message.html">Jassica William</a> Comment on your project.</h3>
-									<p>2 min ago</p>
-								</div><!--notification-info -->
-							</div>
-						 </div>
-					
-					</li>
-					  
-				</ul>
-			 </div>
-			 <!--#Home-->
-			 <div class="login popup"  onclick="signin()">
-				<div>hi</div>
-				<!-- <img src="images/header/u-icon.png" title="" alt=""> -->
-				<div class="popuptext1" id="signin">
-							<div class="notfication-details">
-								<div class="notification-info">
-									<a href="my_profile_account.html" >Profile </a>
-								
-								</div>
-							</div>
-							<div class="notfication-details">
-								<div class="notification-info">
-									<a href="my_profile_dashboard.html">Dashboard</a>
-								</div>
-							</div>
-							<div class="notfication-details">
-								<div class="notification-info">
-									<a href="my_profile_view_detail.html">Profile Detail</a>
-								</div>
-							</div>
-							<div class="notfication-details">
-								<div class="notification-info">
-									<a href="signin.html" >Sign In</a>
-								</div><!--notification-info -->
-							</div>
-						 </div>
+				<!--#Home-->
+				<div class="login popup" id="preNavLogin"><a href="signin.html" class="LoginSignUpLink" >Login / SignUp</a> </div>
+				<div class="login popup" id="addProfile"></div>
 				
-			
-				
-			 </div>
-			</div>
-    </nav>
+			   </div>
+	   </nav>
     <div id="wrapper">
       <!-- Sidebar -->
-		  <ul class="sidebar navbar-nav">
-			<li class="nav-item active">
-			<a href="index.html"><img src="images/menu-icon/Homeicon.png" title="" alt=""> <div class="fos" id="foo">Home</div></a></li>
-			<li><a href="listing.html"><img src="images/menu-icon/Categoryicon.png" title="" alt=""><div class="fos" id="foo1"> Listing </div> </a></li>
-			<li><a href="find_profiles.html"><img src="images/menu-icon/flag.png" title="" alt=""> <div class="fos" id="foo2">Find Profiles</div></a></li>
-			<li class="mpadding"><a href="message.html"><img src="images/menu-icon/message.png" title="" alt=""><div class="fos" id="foo3"> Messages</div></a></li>
-			
-			<li><a href="saved.html"> <img src="images/menu-icon/favicon.png" title="" alt=""><div class="fos" id="foo4">Saved</div></a></li>
-			<li> <a href="my_profile_view_detail.html"> <img src="images/menu-icon/eye.png" title="" alt=""><div class="fos" id="foo5">Most Viewed</div></a></li>
-			<li> <a href="electronics.html"><img src="images/menu-icon/Shape.png" title="" alt=""><div class="fos" id="foo6">Liked</div></a></li>
-			<li class="mpadding"><a href="other_user.html"><img src="images/menu-icon/card-payment.png" title="" alt=""> <div class="fos" id="foo7">Payment</div></a></li>
-			
-			<li> <a href="helps.html"><img src="images/menu-icon/info.png" title="" alt=""><div class="fos" id="foo8">Help</div></a></li>
-			<li> <a href="setting.html"><img src="images/menu-icon/setting.png" title="" alt=""><div class="fos" id="foo9">Setting</div></a></li>
-			<li class="mpadding"><a href="feedback.html"><img src="images/menu-icon/user.png" title="" alt=""><div class="fos" id="foo10"> Send Feedback</div></a></li>
-			
-		  </ul>
 		<div id="content-wrapper">
 			<div class="container-fluid">
 			 <!-- Banner -->
@@ -225,17 +85,31 @@
 						</div>
 						<div class="sform">
 							<h1>Sign Up</h1>
-							<!-- <span>Hello there! Sign up and start managing your item.</span> -->
+							<span>Are you a student in University?</span>
+							<span>If not, this page is not for you, you can proceed and sign in above</span>
 							<form class="sinup" action="#">
-	 						  <div class="input-container">
-								<input class="input-field" type="text" placeholder="Add your website" name="email">
+							<div id="signUpNextMessage" style="padding-bottom: 40px;"></div>
+							  <label for="faculty" style="display: flex">Choose your faculty (optional):</label>
+	 						  <div class="new-post" >
+								<select name="faculty" id="userFaculty" style="color: black;" class="facultyDropdown">
+									<option value="" style="color: black;">Faculty of IT</option>
+									<option value="" style="color: black;">Faculty of Business</option>
+								</select>
 							  </div>
 							  
 							   <div class="input-container">
-								<input class="input-field" type="text" placeholder="About You" name="email">
+								<input class="input-field" id="userDepartment" type="text" placeholder="Add your department (optional)" name="department">
+							  </div>
+
+							  <div class="input-container">
+								<input class="input-field" id="userRegNumber" type="text" placeholder="Registration number (optional)" name="regNumber">
+							  </div>
+
+							  <div class="input-container">
+								<input class="input-field" id="userYearOfStudy" type="text" placeholder="Year of Study (optional)" name="yearOfStudy">
 							  </div>
 								<a href="signup.html" class="black">back</a>
-								<a href="signupprofile.html" class="btn">Next</a>
+								<button type="submit" class="btn" id="signUpNextSubmitData">Next</button>
 							 
 						</form>
 
@@ -306,6 +180,18 @@
     <script src="assets/owlcarousel/owl.carousel.js"></script>
 	 <script src="assets/vendors/highlight.js"></script>
     <script src="assets/js/app.js"></script>
+
+	<!-- Integratin scripts -->
+	<script src="js/Integration/signUp.js"></script>
+	<script src="js/Integration/loggedInUser.js"></script>
+	<script src="js/Integration/facebookLogin.js"></script>
+	<script src="js/Integration/githubLogin.js"></script>
+	<script src="js/Integration/googleLogin.js"></script>
+	<script src="js/Integration/socialMediaLogout.js"></script>
+	<script src="js/Integration/socialMediaProfile.js"></script>
+	<script src="js/Integration/forgotPassword.js"></script>
+	<script src="js/Integration/resetPassword.js"></script>
+	<script src="js/Integration/updateUser.js"></script>
 	
   </body>
 

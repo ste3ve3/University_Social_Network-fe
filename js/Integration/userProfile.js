@@ -41,43 +41,43 @@ userProfileBio.innerHTML = "Your biography goes here!"
 }
 
 
-const profileFacebook = document.getElementById("profileFacebook");
-if(profileFetchedData.profileFacebook){
-profileFacebook.innerHTML = `<img src="../images/profile/facebook_black.png" alt=""> &nbsp; ${profileFetchedData.profileFacebook}`
-}
+// const profileFacebook = document.getElementById("profileFacebook");
+// if(profileFetchedData.profileFacebook){
+// profileFacebook.innerHTML = `<img src="../images/profile/facebook_black.png" alt=""> &nbsp; ${profileFetchedData.profileFacebook}`
+// }
 
-else{
-profileFacebook.innerHTML = ""
-}
-
-
-const profileTwitter = document.getElementById("profileTwitter");
-if(profileFetchedData.profileTwitter){
-profileTwitter.innerHTML = `<img src="../images/profile/twitter_black.png" alt=""> &nbsp; ${profileFetchedData.profileTwitter}`
-}
-
-else{
-profileTwitter.innerHTML = ""
-}
-
-const profileLinkedin = document.getElementById("profileLinkedin");
-if(profileFetchedData.profileLinkedin){
-profileLinkedin.innerHTML = `<img src="../images/profile/linkedin_black.png" alt=""> &nbsp; ${profileFetchedData.profileLinkedin}`
-}
-
-else{
-profileLinkedin.innerHTML = ""
-}
+// else{
+// profileFacebook.innerHTML = ""
+// }
 
 
-const profileInstagram = document.getElementById("profileInstagram");
-if(profileFetchedData.profileInstagram){
-profileInstagram.innerHTML = `<img src="../images/profile/instagram_black.png" alt=""> &nbsp; ${profileFetchedData.profileInstagram}`
-}
+// const profileTwitter = document.getElementById("profileTwitter");
+// if(profileFetchedData.profileTwitter){
+// profileTwitter.innerHTML = `<img src="../images/profile/twitter_black.png" alt=""> &nbsp; ${profileFetchedData.profileTwitter}`
+// }
 
-else{
-profileInstagram.innerHTML = ""
-}
+// else{
+// profileTwitter.innerHTML = ""
+// }
+
+// const profileLinkedin = document.getElementById("profileLinkedin");
+// if(profileFetchedData.profileLinkedin){
+// profileLinkedin.innerHTML = `<img src="../images/profile/linkedin_black.png" alt=""> &nbsp; ${profileFetchedData.profileLinkedin}`
+// }
+
+// else{
+// profileLinkedin.innerHTML = ""
+// }
+
+
+// const profileInstagram = document.getElementById("profileInstagram");
+// if(profileFetchedData.profileInstagram){
+// profileInstagram.innerHTML = `<img src="../images/profile/instagram_black.png" alt=""> &nbsp; ${profileFetchedData.profileInstagram}`
+// }
+
+// else{
+// profileInstagram.innerHTML = ""
+// }
 
 
 
@@ -120,46 +120,46 @@ profileBio.placeholder = "Add your biography here"
 }
 
 
-const UserProfileFacebook = document.getElementById("UserProfileFacebook");
-if(profileFetchedData.profileFacebook){
-UserProfileFacebook.value = profileFetchedData.profileFacebook
-}
+// const UserProfileFacebook = document.getElementById("UserProfileFacebook");
+// if(profileFetchedData.profileFacebook){
+// UserProfileFacebook.value = profileFetchedData.profileFacebook
+// }
 
-else if(profileFetchedData.profileFacebook = ""){
-UserProfileFacebook.value = ""
-}
+// else if(profileFetchedData.profileFacebook = ""){
+// UserProfileFacebook.value = ""
+// }
 
-else{
-UserProfileFacebook.placeholder = "Add your facebook username here"
-}
+// else{
+// UserProfileFacebook.placeholder = "Add your facebook username here"
+// }
 
-const UserProfileTwitter = document.getElementById("UserProfileTwitter");
-if(profileFetchedData.profileTwitter){
-UserProfileTwitter.value = profileFetchedData.profileTwitter
-}
+// const UserProfileTwitter = document.getElementById("UserProfileTwitter");
+// if(profileFetchedData.profileTwitter){
+// UserProfileTwitter.value = profileFetchedData.profileTwitter
+// }
 
-else{
-UserProfileTwitter.placeholder = "Add your twitter username here"
-}
+// else{
+// UserProfileTwitter.placeholder = "Add your twitter username here"
+// }
 
 
-const UserProfileLinkedin = document.getElementById("UserProfileLinkedin");
-if(profileFetchedData.profileLinkedin){
-UserProfileLinkedin.value = profileFetchedData.profileLinkedin
-}
+// const UserProfileLinkedin = document.getElementById("UserProfileLinkedin");
+// if(profileFetchedData.profileLinkedin){
+// UserProfileLinkedin.value = profileFetchedData.profileLinkedin
+// }
 
-else{
-UserProfileLinkedin.placeholder = "Add your linkedin username here"
-}
+// else{
+// UserProfileLinkedin.placeholder = "Add your linkedin username here"
+// }
 
-const UserProfileInstagram = document.getElementById("UserProfileInstagram");
-if(profileFetchedData.profileInstagram){
-UserProfileInstagram.value = profileFetchedData.profileInstagram
-}
+// const UserProfileInstagram = document.getElementById("UserProfileInstagram");
+// if(profileFetchedData.profileInstagram){
+// UserProfileInstagram.value = profileFetchedData.profileInstagram
+// }
 
-else{
-UserProfileInstagram.placeholder = "Add your instagram username here"
-}
+// else{
+// UserProfileInstagram.placeholder = "Add your instagram username here"
+// }
 
 
 }
@@ -189,10 +189,6 @@ function UpdateUserProfile(){
 const profileFirstName = document.getElementById("profileFirstName");
 const profileLastName = document.getElementById("profileLastName");
 const profileEmail = document.getElementById("profileEmail");
-const UserProfileFacebook = document.getElementById("UserProfileFacebook");
-const UserProfileTwitter = document.getElementById("UserProfileTwitter");
-const UserProfileLinkedin = document.getElementById("UserProfileLinkedin");
-const UserProfileInstagram = document.getElementById("UserProfileInstagram");
 const profileBio = document.getElementById("profileBio");
 const file = document.getElementById("file");
 
@@ -200,11 +196,7 @@ const file = document.getElementById("file");
 const formData = new FormData();
     formData.append("firstName", profileFirstName.value);
     formData.append("lastName", profileLastName.value);
-    formData.append("email", profileEmail.value);
-    formData.append("profileFacebook", UserProfileFacebook.value);
-    formData.append("profileTwitter", UserProfileTwitter.value);
-    formData.append("profileLinkedin", UserProfileLinkedin.value);
-    formData.append("profileInstagram", UserProfileInstagram.value);  
+    formData.append("email", profileEmail.value); 
     formData.append("bio", profileBio.value);
     formData.append("image", file.files[0]);
 

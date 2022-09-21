@@ -23,7 +23,7 @@ function singup(){
     const user_repeatPassword = document.getElementById("repeatPassword");
 
     const data = {
-        firstName: first_name.value, 
+        firstName: first_name.value,
         lastName: last_name.value,
         email: user_email.value,
         password: user_password.value,
@@ -50,7 +50,7 @@ fetch("http://localhost:5000/register/createUser", sendData)
         signupMessage.style.color = "green"
         signupMessage.innerHTML = fetchedData.successMessage
         signupForm.reset()
-        setTimeout(()=>{location = "signin.html"}, 4000)
+        setTimeout(()=>{location = "signupnext.html"}, 4000)
     }
 
     else if (fetchedData.validationError){
