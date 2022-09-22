@@ -25,12 +25,14 @@ function opportunity() {
     const opportunityPostPicture = document.getElementById("opportunityPostPicture")
     const opportunityAuthorPicture = document.getElementById("opportunityAuthorPicture")
     const opportunityCategory = document.getElementById("opportunityCategory")
+    const opportunityFaculty = document.getElementById("opportunityFaculty")
 
     const formData = new FormData();
     formData.append("title", opportunityTitle.value);
     formData.append("body", opportunityBody.value);
     formData.append("authorName", opportunityAuthorName.value);
     formData.append("category", opportunityCategory.options[opportunityCategory.selectedIndex].text);
+    formData.append("faculty", opportunityFaculty.options[opportunityFaculty.selectedIndex].text);
     formData.append("author", opportunityAuthorPicture.files[0]);
     formData.append("post", opportunityPostPicture.files[0]);
 

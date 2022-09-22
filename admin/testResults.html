@@ -11,7 +11,6 @@
  
     <!-- start: Css -->
     <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css">
-    <link href="asset/css/create.css" rel="stylesheet">
 
       <!-- plugins -->
       <link rel="stylesheet" type="text/css" href="asset/css/plugins/font-awesome.min.css"/>
@@ -81,19 +80,15 @@
                       <h1 class="animated fadeInLeft">21:00</h1>
                       <p class="animated fadeInRight">Sat,October 1st 2029</p>
                     </li>
-                    <li class="active ripple">
-                      <a href="../index.html" class="tree-toggle nav-header"><span class="fa-home fa"></span> Home 
-                      </a>
-                    </li>
-                    <li class="active ripple">
-                      <a href="dashboard.html" class="tree-toggle nav-header"><span class="fa-home fa"></span> Dashboard Home 
-                      </a>
+                    <li class="ripple"><a class="tree-toggle nav-header"><span class="fa-home fa"></span> Home  <span class="fa-angle-right fa right-arrow text-right"></span> </a>
+                      <ul class="nav nav-list tree">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="dashboard.html">Dashboard Home</a></li> 
+                      </ul>
                     </li>
                     <li class="ripple"><a class="tree-toggle nav-header"><span class="icon-user icons icon text-right"></span> Users  <span class="fa-angle-right fa right-arrow text-right"></span> </a>
                       <ul class="nav nav-list tree">
-                        <li><a href="datatables.html">Registered Users</a></li>
-                        <!-- <li><a href="handsontable.html">handsontable</a></li>
-                        <li><a href="tablestatic.html">Static</a></li> -->
+                        <li><a href="registeredUsers.html">Registered Users</a></li>
                       </ul>
                     </li>
                     <!-- <li class="ripple"><a href="calendar.html"><span class="fa fa-calendar-o"></span>Calendar</a></li> -->
@@ -102,18 +97,12 @@
                         <li><a href="updatePosts.html">Update Posts</a></li>
                       </ul>
                     </li>
-                    <li class="ripple"><a class="tree-toggle nav-header"><span class="fa fa-file-code-o"></span> Pages  <span class="fa-angle-right fa right-arrow text-right"></span> </a>
+                    <li class="ripple"><a class="tree-toggle nav-header"><span class="fa fa-file-code-o"></span> Test Results <span class="fa-angle-right fa right-arrow text-right"></span> </a>
                       <ul class="nav nav-list tree">
-                        <li><a href="forgotpass.html">Forgot Password</a></li>
-                        <li><a href="login.html">SignIn</a></li>
-                        <li><a href="reg.html">SignUp</a></li>
-                        <li><a href="article-v1.html">Article v1</a></li>
-                        <li><a href="search-v1.html">Search Result v1</a></li>
-                        <li><a href="productgrid.html">Product Grid</a></li>
-                        <li><a href="profile-v1.html">Profile v1</a></li>
-                        <li><a href="invoice-v1.html">Invoice v1</a></li>
+                        <li><a href="testResults.html">View Results</a></li>
                       </ul>
                     </li>
+                    
                     <li class="ripple"><a class="tree-toggle nav-header"><span class="fa "></span> MultiLevel  <span class="fa-angle-right fa right-arrow text-right"></span> </a>
                       <ul class="nav nav-list tree">
                         <li><a href="view-mail.html">Level 1</a></li>
@@ -151,41 +140,13 @@
                   </div>                    
                 </div>
 
-                <div class="wrapper"> 
-                    <div class="col-lg-12 page-main">
-                    <div class="new-post">
-                        <h2 style="color: black; text-align: center; margin-top: -35px;">Edit Post</h2>
-                        <form action="" id="postForm">  
-                        <label for="" style="color: black; padding-top: 15px;">Title:</label>
-                        <input type="text" class="title-input" placeholder="Post title" id="postTitle" name="title" />
-						<label for="" style="color: black; padding-top: 15px;">Post's Category:</label>
-                        <select name="category" id="postCategory" style="color: black;" class="title-input">
-                          <option value="Opportunities" style="color: black;">Opportunities</option>
-                          <option value="Events" style="color: black;">Events</option>
-                          <option value="Universities" style="color: black;">Universities</option>
-                          <option value="News" style="color: black;">News</option>
-                          <option value="Others" style="color: black;">Others</option>
-                      </select>
-                        <label for="" style="color: black; padding-top: 15px;">Post's Picture:</label>
-                        <img src="" alt="post image" id="postImage" width="50%">
-                        <input type="file" class="title-input" id="postPicture" name="post"/>
-                        <label for="" style="color: black; padding-top: 15px;">Body:</label>
-                        <textarea id="postBody" class="post-area" name="body">
-                        </textarea>
-                        <label for="" style="color: black; padding-top: 15px;">Author's name:</label>
-                        <input type="text" class="title-input" placeholder="Author's name" id="postAuthorName" name="authorName" />
-                        <label for="" style="color: black; padding-top: 15px;">Author's Picture:</label>
-                        <img src="" alt="post image" id="authorImage" width="50%">
-                        <input type="file" class="title-input"  id="postAuthorPicture" name="author"/>
-                        <div id="postMessage" style="padding-top: 15px; font-size: 18px;"></div>
-                        <button id="postSubmitData" class="add-btn" style="margin-top: 40px;"><i class="fa fa-plus"></i> Edit Post</button>
-                    </form>
-                    </div>
-                    
-                    </div>  
-                    
+    <div class="col-md-12" style="padding:20px;">
+        <div class="col-md-12 padding-0">
+            <div class="col-md-8 padding-0">
+                <div class="col-md-12 padding-0" id="testResultsContainer">
+                  
                 </div>
-                           
+                
 
     <!-- start: Javascript -->
     <script src="asset/js/jquery.min.js"></script>
@@ -202,14 +163,8 @@
     <script src="asset/js/plugins/jquery.vmap.sampledata.js"></script>
     <script src="asset/js/plugins/chart.min.js"></script>
 
-    <script src="asset/js/Integration/loggedInUser.js"></script>
-    <script src="asset/js/Integration/fetchOpportunityPosts.js"></script>
-	<script src="asset/js/Integration/fetchEventsPosts.js"></script>
-	<script src="asset/js/Integration/fetchUniversitiesPosts.js"></script>
-	<script src="asset/js/Integration/fetchNewsPosts.js"></script>
-	<script src="asset/js/Integration/fetchOthersPosts.js"></script>
-	<script src="asset/js/Integration/update.js"></script>
-	<script src="asset/js/Integration/editPost.js"></script>
+    <script src="../js/Integration/loggedInUser.js"></script>
+    <script src="asset/js/Integration/testResults.js"></script>
     <!-- custom -->
      <script src="asset/js/main.js"></script>
      <script type="text/javascript">
@@ -371,34 +326,34 @@
                 ]
             };
 
-        //  window.onload = function(){
-        //         var ctx = $(".doughnut-chart")[0].getContext("2d");
-        //         window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {
-        //             responsive : true,
-        //             showTooltips: true
-        //         });
+         window.onload = function(){
+                var ctx = $(".doughnut-chart")[0].getContext("2d");
+                window.myDoughnut = new Chart(ctx).Doughnut(doughnutData, {
+                    responsive : true,
+                    showTooltips: true
+                });
 
-        //         var ctx2 = $(".line-chart")[0].getContext("2d");
-        //         window.myLine = new Chart(ctx2).Line(lineChartData, {
-        //              responsive: true,
-        //                 showTooltips: true,
-        //                 multiTooltipTemplate: "<%= value %>",
-        //              maintainAspectRatio: false
-        //         });
+                var ctx2 = $(".line-chart")[0].getContext("2d");
+                window.myLine = new Chart(ctx2).Line(lineChartData, {
+                     responsive: true,
+                        showTooltips: true,
+                        multiTooltipTemplate: "<%= value %>",
+                     maintainAspectRatio: false
+                });
 
-        //         var ctx3 = $(".bar-chart")[0].getContext("2d");
-        //         window.myLine = new Chart(ctx3).Bar(barChartData, {
-        //              responsive: true,
-        //                 showTooltips: true
-        //         });
+                var ctx3 = $(".bar-chart")[0].getContext("2d");
+                window.myLine = new Chart(ctx3).Bar(barChartData, {
+                     responsive: true,
+                        showTooltips: true
+                });
 
-        //         var ctx4 = $(".doughnut-chart2")[0].getContext("2d");
-        //         window.myDoughnut2 = new Chart(ctx4).Doughnut(doughnutData2, {
-        //             responsive : true,
-        //             showTooltips: true
-        //         });
+                var ctx4 = $(".doughnut-chart2")[0].getContext("2d");
+                window.myDoughnut2 = new Chart(ctx4).Doughnut(doughnutData2, {
+                    responsive : true,
+                    showTooltips: true
+                });
 
-        //     };
+            };
         
         //  end:  Chart =============
 
@@ -469,18 +424,18 @@
 
         // start: Maps============
 
-        //   jQuery('.maps').vectorMap({
-        //     map: 'world_en',
-        //     backgroundColor: null,
-        //     color: '#fff',
-        //     hoverOpacity: 0.7,
-        //     selectedColor: '#666666',
-        //     enableZoom: true,
-        //     showTooltip: true,
-        //     values: sample_data,
-        //     scaleColors: ['#C8EEFF', '#006491'],
-        //     normalizeFunction: 'polynomial'
-        // });
+          jQuery('.maps').vectorMap({
+            map: 'world_en',
+            backgroundColor: null,
+            color: '#fff',
+            hoverOpacity: 0.7,
+            selectedColor: '#666666',
+            enableZoom: true,
+            showTooltip: true,
+            values: sample_data,
+            scaleColors: ['#C8EEFF', '#006491'],
+            normalizeFunction: 'polynomial'
+        });
 
         // end: Maps==============
 

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  
+<!--   15:40:28 GMT -->
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!-- Favicon -->
+	<link href="images/header/fav.jpg" rel="shortcut icon" type="image/x-icon"/>
+
+    <title>University Social Network | Home </title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="css/style.css" rel="stylesheet">
+	    <link href="css/responsive.css" rel="stylesheet">
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Page level plugin CSS-->
+     <link rel="stylesheet" href="css/portfolio.css" type="text/css">
+     <link rel="stylesheet" href="css/dropdown.css" type="text/css">
+    <link rel="stylesheet" href="css/owlslider.css" type="text/css">
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	 <link rel="stylesheet" href="assets/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/assets/owl.theme.default.min.css">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Tiro+Bangla&display=swap');
+
+        :root {
+        --body-bg: white;
+        ;
+        --start_quiz-c: #1d9eab;
+        --white: #fff;
+        --bg-button: #e0e0e0;
+        --right: #87e487;
+        --wrong: #f19a9a;
+        }
+
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+
+        body {
+        font-family: 'Roboto', sans-serif;
+        height: 100vh;
+        background-color: var(--body-bg);
+        }
+
+        input,
+        button,
+        h1 ,
+        span{
+        outline: 0;
+        border: 0;
+        font-family: inherit;
+        }
+
+        /* center all box  */
+        .start,
+        .quiz_container,
+        .result_box {
+        position: absolute;
+        top: 55%;
+        left: 56%;
+        transform: translate(-50%, -50%);
+        border-radius: 12px;
+        background: var(--white);
+        box-shadow: 15px 15px 24px grey, -15px -15px 20px grey;
+        }
+
+        /* start button  */
+        .start #start_quiz {
+        padding: 15px;
+        border-radius: 10px;
+        color: var(--start_quiz-c);
+        font-size: 2rem;
+        cursor: pointer;
+        }
+
+        /* quiz box  */
+        .quiz_container {
+        border-radius: 20px;
+        padding: 20px;
+        width: 600px;
+        display: none;
+        }
+
+        /* quiz_text  */
+        .quiz_container .quiz_text {
+        margin-bottom: 20px;
+        }
+
+        .quiz_container .quiz_text h1 {
+        font-size: 1.5rem;
+        letter-spacing: 2px;
+        text-align: center;
+        }
+
+        /* quiz_box  */
+        .quiz_box {
+        padding: 10px 5px;
+        }
+
+        .quiz_box .quiz_question h1 {
+        font-size: 1.1rem;
+        }
+
+        .quiz_box .quiz_question p {
+        display: inline;
+        }
+
+        /* options  */
+        .option_list {
+        margin-top: 15px;
+        font-size: 1rem;
+        padding: 5px 15px;
+        background-color: var(--bg-button);
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.5s ease;
+        user-select: none;
+        box-shadow: 1px 1px 8px #bebebe, -1px -1px 20px #ffffff
+        }
+
+        .options .option_list:hover {
+        background-color: var(--start_quiz-c);
+        }
+
+        .options .option_list.correct {
+        background-color: var(--right);
+        }
+
+        .options .option_list.wrong {
+        background-color: var(--wrong);
+        }
+
+        .disabled {
+        pointer-events: none;
+        }
+
+        /* footer  */
+        footer {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        user-select: none;
+
+        }
+
+        .center {
+        display: flex;
+        align-items: center;
+        font-size: 0.9rem;
+        margin-left: 6px;
+        }
+
+        footer .buttons {
+        margin-right: 6px;
+        }
+
+        /* .btn {
+        padding: 7px 15px;
+        border-radius: 10px;
+        background: var(--start_quiz-c);
+        color: var(--white);
+        font-size: 1rem;
+        cursor: pointer;
+        } */
+
+        /* score  */
+        .result_box {
+        display: none;
+        padding: 20px;
+        text-align: center;
+        }
+
+        .score span {
+        margin: 15px 0;
+        display: flex;
+        justify-content: center;
+        font-size: 1rem;
+        font-weight: 600;
+        }
+
+        span p {
+        padding: 0 5px;
+        }
+
+    </style>
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand-md navbar-light fixed-top sticky-top nav-menu">
+
+     <div class="col-md-2 col-xs-12 p-left  p-right">
+
+      <button  class="btn btn-link btn-sm text-white order-1 order-sm-0"  id="sidebarToggle" >
+        <i class="fas fa-bars"></i>
+      </button>
+		<div class="logo" style="margin-top: 1px;">
+			<a href="index.html">
+			<img src="images/header/Mainlogo.jpg" alt="logo">
+			</a>
+		</div>
+	</div>
+      <!-- Navbar -->
+		<div class="col-md-5 col-xs-12 p-left  p-right">
+			 <div class="searching">
+				<form>
+				<button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+				<input type="text" name="search" placeholder="Search Places, Events, House, opportunities, news etc...">
+				</form>
+			</div>
+		</div>
+			<div class="col-md-5 col-xs-12 p-left p-right">
+			 <div class="add-listing" id="addListing">
+				<a href="upload.html">
+				<img src="images/header/plus-ico.png" alt="">
+				Create a post</a>
+			 </div>
+			 <div class="home">
+				<ul>
+					<li>
+						<a  href="index.html"><img src="images/header/home.png" alt="" title="" >
+							<span>1</span>
+						</a>
+					</li>
+					<li class="popup"  onclick="myFunctionmsg()">
+						<img src="images/header/mgs.png" alt="" title="" >
+						<span>4</span>
+						<div class="popuptext" id="message">
+							<div class="notfication-details">
+								<div class="noty-user-img">
+									<img src="images/resources/ny-img1.png" alt="">
+								</div>
+								<div class="notification-info">
+									<h5><a href="message.html">Jassica William</a>
+									Lorem ipsum dolor sit amet, 
+									consectetur adipisicing elit,</h5>
+									<p>2 min ago</p>
+								</div><!--notification-info -->
+							</div>
+							<div class="notfication-details">
+								<div class="noty-user-img">
+									<img src="images/resources/ny-img1.png" alt="">
+								</div>
+								<div class="notification-info">
+									<h5><a href="message.html">Jassica William</a>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+									.</h5>
+									<p>2 min ago</p>
+								</div><!--notification-info -->
+							</div>
+
+							<div class="notfication-details">
+								<div class="noty-user-img">
+									<img src="images/resources/ny-img1.png" alt="">
+								</div>
+								<div class="notification-info">
+									<h5><a href="message.html">Jassica William</a> 
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+									</h5>
+									<p>2 min ago</p>
+								</div><!--notification-info -->
+							</div>
+							
+						 </div>
+				
+					</li>
+					<li class="popup"  onclick="myFunctionicon()">
+						<img src="images/header/notification.png" alt="" title="" >
+					<span>2</span>
+					<div class="popuptext" id="icon">
+							<div class="notfication-details">
+								<div class="noty-user-img">
+									<img src="images/resources/ny-img1.png" alt="">
+								</div>
+								<div class="notification-info">
+									<h3><a href="message.html">Jassica William</a> Comment on your project.</h3>
+									<p>2 min ago</p>
+								</div><!--notification-info -->
+							</div>
+							<div class="notfication-details">
+								<div class="noty-user-img">
+									<img src="images/resources/ny-img1.png" alt="">
+								</div>
+								<div class="notification-info">
+									<h3><a href="message.html">Jassica William</a> Comment on your project.</h3>
+									<p>2 min ago</p>
+								</div><!--notification-info -->
+							</div>
+							<div class="notfication-details">
+								<div class="noty-user-img">
+									<img src="images/resources/ny-img1.png" alt="">
+								</div>
+								<div class="notification-info">
+									<h3><a href="message.html">Jassica William</a> Comment on your project.</h3>
+									<p>2 min ago</p>
+								</div><!--notification-info -->
+							</div>
+						 </div>
+					
+					</li>
+					  
+				</ul>
+			 </div>
+			 <!--#Home-->
+			 <div class="login popup" id="preNavLogin"><a href="signin.html" class="LoginSignUpLink" >Login / SignUp</a> </div>
+			 <div class="login popup" id="addProfile"></div>
+			 
+			</div>
+    </nav>
+    <div id="wrapper">
+      <!-- Sidebar -->
+		  <ul class="sidebar navbar-nav" id='hideUserProfile'>
+			<li class="nav-item active">
+			<a href="index.html"><img src="images/menu-icon/Homeicon.png" title="" alt=""> <div class="fos" id="foo">Home</div></a></li>
+			<li><a href="listing.html"><img src="images/menu-icon/Categoryicon.png" title="" alt=""><div class="fos" id="foo1"> Posts </div> </a></li>
+			<li><a href="find_profiles.html"><img src="images/menu-icon/flag.png" title="" alt=""> <div class="fos" id="foo2">Find Profiles</div></a></li>
+			<li class="mpadding"><a href="message.html"><img src="images/menu-icon/message.png" title="" alt=""><div class="fos" id="foo3"> Messages</div></a></li>
+			
+			<li><a href="#"> <img src="images/menu-icon/favicon.png" title="" alt=""><div class="fos" id="foo4">Saved</div></a></li>
+			<li> <a href="#"> <img src="images/menu-icon/eye.png" title="" alt=""><div class="fos" id="foo5">Most Viewed</div></a></li>
+			<li> <a href="#"><img src="images/menu-icon/Shape.png" title="" alt=""><div class="fos" id="foo6">Liked</div></a></li>
+			<li class="mpadding"><a href="#"><img src="images/menu-icon/card-payment.png" title="" alt=""> <div class="fos" id="foo7">Notifications</div></a></li>
+			
+			<li> <a href="helps.html"><img src="images/menu-icon/info.png" title="" alt=""><div class="fos" id="foo8">Help</div></a></li>
+			<li> <a href="setting.html"><img src="images/menu-icon/setting.png" title="" alt=""><div class="fos" id="foo9">Setting</div></a></li>
+			<li class="mpadding"><a href="feedback.html"><img src="images/menu-icon/user.png" title="" alt=""><div class="fos" id="foo10"> Send Feedback</div></a></li>
+			
+		  </ul>
+		<div id="content-wrapper">
+			<div class="container-fluid" id='hideUserProfile'>
+
+
+            <!-- header start butoon  -->
+            <header class="start">
+                <button id="start_quiz">Start Test</button>
+            </header>
+            <!-- quiz box -->
+            <section class="quiz_container">
+                <div class="quiz_text">
+                <h1>IT Multiple choice questions (MCQ's)</h1>
+                </div>
+        
+                <div class="quiz_box">
+                <div class="quiz_question"></div>
+                <div class="options"></div>
+                </div>
+        
+                <footer>
+                <div class="question_no"></div>
+                <div class="buttons">
+                    <button class="btn" id="next">Next</button>
+                </div>
+                </footer>
+            </section>
+        
+            <article class="result_box">
+                <div class="score"></div>
+                <button id="replay" class="btn">Repeat Test</button>
+                <button id="replay" class="btn" onclick="continueToBlog()">Continue</button>
+            </article>
+            
+	
+
+
+	<div class="clearfix"></div>
+
+		</div>
+      <!-- /.content-wrapper -->
+    </div>
+	</div>
+    <!-- /#wrapper -->
+	
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+   <!-- Page level plugin JavaScript-->
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/datatables/jquery.dataTables.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+	 <script src="js/portfolio.js"></script>
+	 <script src="js/you-listing.js"></script>
+	 <script src="js/menurght.js"></script>
+	 <script src="js/crausal1.js"></script>
+	 <script src="js/dropdown.js"></script>
+	     <!-- Demo scripts for this page-->
+   	<script src="js/slick.min.js"></script>.
+	 <!-- Assect scripts for this page-->
+	<script src="assets/vendors/jquery.min.js"></script>
+    <script src="assets/owlcarousel/owl.carousel.js"></script>
+	 <script src="assets/vendors/highlight.js"></script>
+    <script src="assets/js/app.js"></script>
+
+	<!-- Integratin scripts -->
+	<script src="js/Integration/loggedInUser.js"></script>
+	<script src="js/Integration/index.js"></script>
+	<script src="js/Integration/facebookLogin.js"></script>
+	<script src="js/Integration/githubLogin.js"></script>
+	<script src="js/Integration/googleLogin.js"></script>
+	<script src="js/Integration/socialMediaLogout.js"></script>
+	<script src="js/Integration/socialMediaProfile.js"></script>
+	<script src="js/Integration/forgotPassword.js"></script>
+	<script src="js/Integration/resetPassword.js"></script>
+	<script src="js/Integration/userMediaProfile.js"></script>
+	<script src="js/Integration/fetchOpportunityPosts.js"></script>
+	<script src="js/Integration/fetchEventsPosts.js"></script>
+	<script src="js/Integration/fetchUniversitiesPosts.js"></script>
+	<script src="js/Integration/fetchNewsPosts.js"></script>
+	<script src="js/Integration/fetchOthersPosts.js"></script>
+	<script src="js/Integration/singlePost.js"></script>
+
+
+    <script>
+        const questions = [
+    {
+        'id': 1,
+        "question": 'The computer word size is a multiple of?',
+        'Options': [
+            '16 bits',
+            '4 bits',
+            '1024 bits',
+            '10 bits'
+        ],
+        'answer': '16 bits'
+    },
+    {
+        'id': 2,
+        "question": 'In computer terminology, OCR stands for?',
+        'Options': [
+            'Optical Card Reader',
+            'Online Computer Retrieval',
+            'Optical Character Reader',
+            'Office Cash Reciever'
+        ],
+        'answer': 'Optical Character Reader'
+    },
+    {
+        'id': 3,
+        "question": 'In information technology, processed form of data is called?',
+        'Options': [
+            'Data processing',
+            'System',
+            'Information',
+            'Instruction'
+        ],
+        'answer': 'Information'
+    },
+    {
+        'id': 4,
+        "question": 'The world has become a global village because of?',
+        'Options': [
+            'Chatting',
+            'Information Technology',
+            'Networking',
+            'Transferring information'
+        ],
+        'answer': 'Information Technology'
+    },
+    {
+        'id': 5,
+        "question": 'In 1940, first electronic computer was invented by?',
+        'Options': [
+            'Clifford Berry',
+            'George Boole',
+            'Atanasoff and Berry',
+            'John V. Atanasoff'
+        ],
+        'answer': 'Atanasoff and Berry'
+    },
+    {
+        'id': 6,
+        "question": 'Interconnection of computer is possible only with the help of?',
+        'Options': [
+            'Cables',
+            'Information Technology',
+            'Communication Links',
+            'Processing'
+        ],
+        'answer': 'Information Technology'
+    },
+    {
+        'id': 7,
+        "question": 'Information technology deals with?',
+        'Options': [
+            'Information',
+            'Data',
+            'Knowledge',
+            'All of the above'
+        ],
+        'answer': 'All of the above'
+    },
+    {
+        'id': 8,
+        "question": 'The binary value of 25 is?',
+        'Options': [
+            '10101',
+            '11001',
+            '00111',
+            '11111'
+        ],
+        'answer': '11001'
+    },
+    {
+        'id': 9,
+        "question": 'Hardware cost/system analysis and operation costs reflect different types of?',
+        'Options': [
+            'Cost of information',
+            'Value of information',
+            'Types of info',
+            'All are true'
+        ],
+        'answer': 'Cost of information'
+    },
+    {
+        'id': 10,
+        "question": 'Client / Server database system focus on?',
+        'Options': [
+            'Validating data',
+            'Managing and presenting logic',
+            'Requesting and receiving information from a database server',
+            'All are true'
+        ],
+        'answer': 'All are true'
+    }
+
+]
+
+const start_quiz = document.querySelector('#start_quiz');
+const container = document.querySelector('.quiz_container');
+const result_box = document.querySelector('.result_box');
+const next = document.querySelector('#next');
+const section_next = document.querySelector('.ques');
+const replay = document.querySelector('#replay');
+const options = document.querySelector('.options');
+const buttons = document.querySelector('.buttons');
+
+// start_quiz button event 
+start_quiz.addEventListener('click', () => {
+    start_quiz.style.display = 'none';
+    container.style.display = 'block';
+    show_question(0);
+    buttons.classList.add('disabled');
+
+})
+
+// replay button event 
+replay.addEventListener('click', () => {
+    start_quiz.style.display = 'block';
+    result_box.style.display = 'none';
+    active = 0;
+    userscore = 0;
+    show_question(active);
+    options.classList.remove('disabled');
+})
+
+// next button event 
+let active = 0; // question index number
+next.addEventListener('click', () => {
+    if (active < questions.length - 1) {
+        active++;
+        show_question(active);
+        options.classList.remove('disabled');
+        buttons.classList.add('disabled')
+    }
+    else {
+        result_box.style.display = 'block';
+        container.style.display = 'none'
+        result(); //result function 
+    }
+})
+
+// show_question function 
+let userscore = 0; // correct answer select by user
+function show_question(index) {
+    // question name 
+    const quiz_question = document.querySelector('.quiz_question');
+    quiz_question.innerHTML = `<h1><p>${questions[index].id}. </p>${questions[index].question}</h1>`
+    //  question option list 
+    options.innerHTML = `<div class="option_list">${questions[index].Options[0]}</div>
+    <div class="option_list">${questions[index].Options[1]}</div>
+    <div class="option_list">${questions[index].Options[2]}</div>
+    <div class="option_list">${questions[index].Options[3]}</div>`
+    // current number of question
+    const question_no = document.querySelector('.question_no');
+    question_no.innerHTML = `<span class="center"><p>${questions[index].id}</p>of<p>${questions.length}</p>Questions</span>`
+
+    const options_list = document.querySelectorAll('.option_list');
+    options_list.forEach((e) => {
+        e.addEventListener('click', (op) => {
+            if (op.target.innerHTML == questions[active].answer) {
+                console.log(op.target.innerHTML);
+                userscore++; //userscore incresed by correct answer
+                e.classList.add('correct');
+                options.classList.add('disabled');
+                buttons.classList.remove('disabled');
+            }
+
+            else {
+                e.classList.add('wrong');
+                options.classList.add('disabled');
+                buttons.classList.remove('disabled');
+                // if wrong answer selected then correct class added correct answer 
+                for (let i = 0; i < options.children.length; i++) {
+                    if (options.children[i].innerHTML == questions[active].answer) {
+                        options.children[i].classList.add('correct');
+                    }
+                }
+            }
+        })
+    })
+}
+
+function result() {
+    const score = document.querySelector('.score');
+    score.innerHTML = `<h1>Your Score is</h1><span class="center"><p id="resultScore">${userscore}</p>of<p>${questions.length}</p></span>`
+}
+
+
+    </script>
+  </body>
+
+
+<!--   15:44:08 GMT -->
+</html>

@@ -288,6 +288,8 @@ async function loggedInUser(){
   UserProfile.style.display = "none"
   })
 
+  
+
 //   myProfile.addEventListener("click", ()=>{
 //   UserProfile.style.display = "none"
 //   })

@@ -200,7 +200,7 @@ async function loggedInUser(){
           <br><br>
 
           <div class="switchAccount" style=" padding: 30px 50px 58px 50px;">
-                <p class="switchAccountLink" id="switchAccountLink"> 
+                <p class="switchAccountLink" id="switchAccountLink" onclick ="findProfile()"> 
                 <img src="images/menu-icon/flag.png" title="" alt="">
                 Find Profiles
                 </p>
@@ -288,14 +288,6 @@ async function loggedInUser(){
   UserProfile.style.display = "none"
   })
 
-//   myProfile.addEventListener("click", ()=>{
-//   UserProfile.style.display = "none"
-//   })
-
-//   myFooterCopyRight.addEventListener("click", ()=>{
-//   UserProfile.style.display = "none"
-//   })
-
 
 }
 
@@ -312,3 +304,7 @@ if(!token){
 const topRightLogin = document.getElementById("addProfile")
     topRightLogin.style.display = "none"
 }
+
+function findProfile(){
+    location = "find_profiles.html"
+   }
