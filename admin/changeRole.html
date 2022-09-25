@@ -11,6 +11,7 @@
  
     <!-- start: Css -->
     <link rel="stylesheet" type="text/css" href="asset/css/bootstrap.min.css">
+    <link href="asset/css/create.css" rel="stylesheet">
 
       <!-- plugins -->
       <link rel="stylesheet" type="text/css" href="asset/css/plugins/font-awesome.min.css"/>
@@ -61,6 +62,7 @@
                   <div class="login popup" id="addProfile" style="margin-top: -13px;"></div>
                 </li>
                
+                
               </ul>
             </div>
           </div>
@@ -127,37 +129,25 @@
                   </div>                    
                 </div>
 
-                <div class="tabby" id='hideUserProfile' style="padding-left: 40px;">
-                 
-                <div id="updateMessage" style="padding: 10px; 
-                text-align: center; 
-                color: #f0f3f4;
-                width: 70%;
-                font-size: 18px;
-                margin: auto auto 20px auto;
-                "></div>
-            
-                <div class="filterDiv Places" id="adminPlaces">
+                <div class="wrapper"> 
+                    <div class="col-lg-12 page-main">
+                    <div class="new-post">
+                        <h2 style="color: black; text-align: center; margin-top: -35px;">Change role</h2>
+                        <form action="" id="roleForm">  
+					            	<label for="" style="color: black; padding-top: 15px;">Role:</label>
+                        <select name="category" id="roleCategory" style="color: black;" class="title-input">
+                          <option value="user" style="color: black;">user</option>
+                          <option value="admin" style="color: black;">admin</option>
+                          <option value="super admin" style="color: black;">super admin</option>
+                      </select>
+                        <div id="roleMessage" style="padding-top: 15px; font-size: 18px;"></div>
+                        <button id="roleSubmitData" class="add-btn" style="margin-top: 40px;"><i class="fa fa-plus"></i> Edit Role</button>
+                    </form>
+                    </div>
+                    
+                    </div>  
                     
                 </div>
-            
-                <div class="filterDiv Real" id='adminReal'>
-            
-                </div>
-                
-                <div class="filterDiv Electronic" id="adminElectronic">
-            
-                </div>
-                
-                <div class="filterDiv Cars" id="adminCars">
-                    
-                 </div>
-                
-                <div class="filterDiv Others" id="adminOthers">
-            
-                </div>
-                
-            </div>
                            
 
     <!-- start: Javascript -->
@@ -182,6 +172,9 @@
 	<script src="asset/js/Integration/fetchNewsPosts.js"></script>
 	<script src="asset/js/Integration/fetchOthersPosts.js"></script>
 	<script src="asset/js/Integration/update.js"></script>
+	<script src="asset/js/Integration/editPost.js"></script>
+	<script src="asset/js/Integration/assignRole.js"></script>
+	<script src="asset/js/Integration/changeRole.js"></script>
     <!-- custom -->
      <script src="asset/js/main.js"></script>
      <script type="text/javascript">

@@ -102,6 +102,8 @@ fetch('http://localhost:5000/updatePost/'+myKey, UserRequestOptions,)
 
         const authorImage = document.getElementById("authorImage")
         authorImage.src = postFetchedData.postContent.authorImage;
+
+        setTimeout(()=>{location = "updatePosts.html"}, 2000)
     }
 
     else if (postFetchedData.postUpdatedError){

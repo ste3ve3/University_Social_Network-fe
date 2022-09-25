@@ -41,43 +41,63 @@ userProfileBio.innerHTML = "Your biography goes here!"
 }
 
 
-// const profileFacebook = document.getElementById("profileFacebook");
-// if(profileFetchedData.profileFacebook){
-// profileFacebook.innerHTML = `<img src="../images/profile/facebook_black.png" alt=""> &nbsp; ${profileFetchedData.profileFacebook}`
-// }
+const profileFaculty = document.getElementById("profileFaculty");
+if(profileFetchedData.faculty){
+profileFaculty.innerHTML = `<span style="text-decoration: underline; color: white;"> Faculty</span>: ${profileFetchedData.faculty}`
+}
 
-// else{
-// profileFacebook.innerHTML = ""
-// }
-
-
-// const profileTwitter = document.getElementById("profileTwitter");
-// if(profileFetchedData.profileTwitter){
-// profileTwitter.innerHTML = `<img src="../images/profile/twitter_black.png" alt=""> &nbsp; ${profileFetchedData.profileTwitter}`
-// }
-
-// else{
-// profileTwitter.innerHTML = ""
-// }
-
-// const profileLinkedin = document.getElementById("profileLinkedin");
-// if(profileFetchedData.profileLinkedin){
-// profileLinkedin.innerHTML = `<img src="../images/profile/linkedin_black.png" alt=""> &nbsp; ${profileFetchedData.profileLinkedin}`
-// }
-
-// else{
-// profileLinkedin.innerHTML = ""
-// }
+else{
+profileFaculty.innerHTML = ""
+}
 
 
-// const profileInstagram = document.getElementById("profileInstagram");
-// if(profileFetchedData.profileInstagram){
-// profileInstagram.innerHTML = `<img src="../images/profile/instagram_black.png" alt=""> &nbsp; ${profileFetchedData.profileInstagram}`
-// }
+const profileDepartment = document.getElementById("profileDepartment");
+if(profileFetchedData.department){
+profileDepartment.innerHTML = `<span style="text-decoration: underline; color: white;">Department</span>: ${profileFetchedData.department}`
+}
 
-// else{
-// profileInstagram.innerHTML = ""
-// }
+else{
+profileDepartment.innerHTML = ""
+}
+
+const profileRegistrationNumber = document.getElementById("profileRegistrationNumber");
+if(profileFetchedData.regNumber){
+profileRegistrationNumber.innerHTML = `<span style="text-decoration: underline; color: white;">Registration Number</span>: ${profileFetchedData.regNumber}`
+}
+
+else{
+profileRegistrationNumber.innerHTML = ""
+}
+
+
+const profileDateOfBirth = document.getElementById("profileDateOfBirth");
+if(profileFetchedData.dateOfBirth){
+profileDateOfBirth.innerHTML = `<span style="text-decoration: underline; color: white;">Date Of Birth</span>: ${profileFetchedData.dateOfBirth}`
+}
+
+else{
+profileDateOfBirth.innerHTML = ""
+}
+
+
+const profileYearOfStudy = document.getElementById("profileYearOfStudy");
+if(profileFetchedData.yearOfStudy){
+profileYearOfStudy.innerHTML = `<span style="text-decoration: underline; color: white;">Year Of Study</span>: ${profileFetchedData.yearOfStudy}`
+}
+
+else{
+profileYearOfStudy.innerHTML = ""
+}
+
+
+const profilePhoneNumber = document.getElementById("profilePhoneNumber");
+if(profileFetchedData.phoneNumber){
+profilePhoneNumber.innerHTML = `<span style="text-decoration: underline; color: white;">Phone number</span>: ${profileFetchedData.phoneNumber}`
+}
+
+else{
+profilePhoneNumber.innerHTML = ""
+}
 
 
 
@@ -107,8 +127,8 @@ profileFirstName.value = profileFetchedData.firstName
 const profileLastName = document.getElementById("profileLastName");
 profileLastName.value = profileFetchedData.lastName
 
-const profileEmail = document.getElementById("profileEmail");
-profileEmail.value = profileFetchedData.email
+// const profileEmail = document.getElementById("profileEmail");
+// profileEmail.value = profileFetchedData.email
 
 const profileBio = document.getElementById("profileBio");
 if (profileFetchedData.bio){
@@ -119,47 +139,56 @@ else{
 profileBio.placeholder = "Add your biography here"
 }
 
+const UserProfileFaculty = document.getElementById("UserProfileFaculty");
+if(profileFetchedData.faculty){
+UserProfileFaculty.value = profileFetchedData.faculty
+}
 
-// const UserProfileFacebook = document.getElementById("UserProfileFacebook");
-// if(profileFetchedData.profileFacebook){
-// UserProfileFacebook.value = profileFetchedData.profileFacebook
-// }
+const UserProfileDepartment = document.getElementById("UserProfileDepartment");
+if(profileFetchedData.department){
+UserProfileDepartment.value = profileFetchedData.department
+}
 
-// else if(profileFetchedData.profileFacebook = ""){
-// UserProfileFacebook.value = ""
-// }
-
-// else{
-// UserProfileFacebook.placeholder = "Add your facebook username here"
-// }
-
-// const UserProfileTwitter = document.getElementById("UserProfileTwitter");
-// if(profileFetchedData.profileTwitter){
-// UserProfileTwitter.value = profileFetchedData.profileTwitter
-// }
-
-// else{
-// UserProfileTwitter.placeholder = "Add your twitter username here"
-// }
+else{
+UserProfileDepartment.placeholder = "Add your department here"
+}
 
 
-// const UserProfileLinkedin = document.getElementById("UserProfileLinkedin");
-// if(profileFetchedData.profileLinkedin){
-// UserProfileLinkedin.value = profileFetchedData.profileLinkedin
-// }
+const UserProfileRegistrationNumber = document.getElementById("UserProfileRegistrationNumber");
+if(profileFetchedData.regNumber){
+UserProfileRegistrationNumber.value = profileFetchedData.regNumber
+}
 
-// else{
-// UserProfileLinkedin.placeholder = "Add your linkedin username here"
-// }
+else{
+UserProfileRegistrationNumber.placeholder = "Add your registration number here"
+}
 
-// const UserProfileInstagram = document.getElementById("UserProfileInstagram");
-// if(profileFetchedData.profileInstagram){
-// UserProfileInstagram.value = profileFetchedData.profileInstagram
-// }
+const UserProfileYearOfStudy = document.getElementById("UserProfileYearOfStudy");
+if(profileFetchedData.yearOfStudy){
+UserProfileYearOfStudy.value = profileFetchedData.yearOfStudy
+}
 
-// else{
-// UserProfileInstagram.placeholder = "Add your instagram username here"
-// }
+else{
+UserProfileYearOfStudy.placeholder = "Add your year of study here"
+}
+
+const UserProfileDateOfBirth = document.getElementById("UserProfileDateOfBirth");
+if(profileFetchedData.dateOfBirth){
+UserProfileDateOfBirth.value = profileFetchedData.dateOfBirth
+}
+
+else{
+UserProfileDateOfBirth.placeholder = "Add your date of birth here"
+}
+
+const UserProfilePhoneNumber = document.getElementById("UserProfilePhoneNumber");
+if(profileFetchedData.phoneNumber){
+UserProfilePhoneNumber.value = profileFetchedData.phoneNumber
+}
+
+else{
+UserProfilePhoneNumber.placeholder = "Add your phone number here"
+}
 
 
 }
@@ -188,15 +217,25 @@ UpdateUserProfile();
 function UpdateUserProfile(){
 const profileFirstName = document.getElementById("profileFirstName");
 const profileLastName = document.getElementById("profileLastName");
-const profileEmail = document.getElementById("profileEmail");
 const profileBio = document.getElementById("profileBio");
 const file = document.getElementById("file");
+const profileFaculty = document.getElementById("UserProfileFaculty");
+const profileDepartment = document.getElementById("UserProfileDepartment");
+const profileRegistrationNumber = document.getElementById("UserProfileRegistrationNumber");
+const profileYearOfStudy = document.getElementById("UserProfileYearOfStudy");
+const profileDateOfBirth = document.getElementById("UserProfileDateOfBirth");
+const profilePhoneNumber = document.getElementById("UserProfilePhoneNumber");
 
 
 const formData = new FormData();
     formData.append("firstName", profileFirstName.value);
     formData.append("lastName", profileLastName.value);
-    formData.append("email", profileEmail.value); 
+    formData.append("faculty", profileFaculty.options[profileFaculty.selectedIndex].text);
+    formData.append("department", profileDepartment.value);
+    formData.append("regNumber", profileRegistrationNumber.value);
+    formData.append("yearOfStudy", profileYearOfStudy.value);
+    formData.append("dateOfBirth", profileDateOfBirth.value);
+    formData.append("phoneNumber", profilePhoneNumber.value);
     formData.append("bio", profileBio.value);
     formData.append("image", file.files[0]);
 

@@ -57,6 +57,13 @@ async function fetchEventsPosts(){
                 <div style="font-size: 20px; text-align: right; padding-bottom: 8px; padding-right: 20px;" id= '${resultId}' onclick="deleteResult('${resultId}')">
                 <i class="fa fa-trash" aria-hidden="true"></i>
                 </div>
+
+                <div style="font-size: 16px; text-align: center; padding-bottom: 20px;  border-top: 5px solid #f0f3f4; " id= ''>
+                <button id="postSubmitData" class="add-btn" style="margin-top: 20px;
+                border: none;
+                background: #ff6b6b;
+                padding: 5px 20px; color: white;"><span class="fa fa-envelope-o"></span> Send Invitation </button>
+                </div>
             </div>
         </div>
 

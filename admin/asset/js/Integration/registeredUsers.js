@@ -36,13 +36,7 @@ async function fetchRegisteredUsers(){
                 <td>${firstName} ${lastName}</td>
                 <td>${email}</td>
                 <td>${faculty}</td>
-                <td>
-                <select name="" id="userRoles" class="">
-                    <option value="user">user</option>
-                    <option value="admin">admin</option>
-                    <option value="super admin">super admin</option>
-                </select>
-                </td>
+                <td>${role}</td>
             </tr>
 
         
@@ -52,9 +46,6 @@ async function fetchRegisteredUsers(){
         
         
         usersContainer.innerHTML += userTemplate;
-        let userRole = document.getElementById("userRoles");
-        userRole.value = usersArray.role
-        console.log(userRole)
     
     }
     

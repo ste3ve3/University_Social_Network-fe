@@ -51,7 +51,7 @@ async function fetchOpportunityPosts(){
                 
             </div>
             <div class="box-heading3">
-                By ${authorName} <i class="fa pull-right fa-heart-o" aria-hidden="true"></i>
+                By ${authorName} <i  aria-hidden="true"></i>
             </div>
             <div class="">
             <button  class="box-radius2 deletePost" id= '${myKey}' onclick="deletePost('${myKey}')"> Delete Post </button>

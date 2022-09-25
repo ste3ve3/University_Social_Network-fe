@@ -17,6 +17,10 @@ if(checkFetchedData.role === "admin"){
     addListing.style.display = "block";
 }
 
+if(checkFetchedData.role === "super admin"){
+    addListing.style.display = "block";
+}
+
 if(!checkFetchedData.faculty){
     const uptitudeTest = document.getElementById("uptitudeTest");  
     uptitudeTest.style.display = "none" 
@@ -53,32 +57,33 @@ checkLoggedInUser()
 
 //Protect index.html
 
-const Indextoken = sessionStorage.getItem("token")
-if(!Indextoken){
+
+
+
+async function socialIndexLoggedInUser(){
+
+
+
+    const getData = {
+        method: "GET",
+        headers: new Headers({'Content-Type': 'application/json; charset=UTF-8'})
+    }
+
+  let response = await fetch("http://localhost:5000/socialMediaLoggedInUser", getData)
+  const fetchedData = await response.json()
+  console.log(fetchedData)
+
+  const Indextoken = sessionStorage.getItem("token")
+   
+  if (fetchedData.message && !Indextoken){
     location = "mainPage.html"
+
+  }
+
+
 }
 
-
-// async function socialIndexLoggedInUser(){
-
-
-
-//     const getData = {
-//         method: "GET",
-//         headers: new Headers({'Content-Type': 'application/json; charset=UTF-8'})
-//     }
-
-//   let response = await fetch("http://localhost:5000/socialMediaLoggedInUser", getData)
-//   const fetchedData = await response.json()
-//   console.log(fetchedData)
-
-//   if (fetchedData.message){
-//     location = "mainPage.html"
-
-//   }
-// }
-
-// socialIndexLoggedInUser()
+socialIndexLoggedInUser()
 
 
 
@@ -129,13 +134,6 @@ location = "singlePost.html"
 
 }
 
-//show or hide uptitude test
 
-function uptitudeTest(){
-  
-  const uptitudeTestLink = document.getElementById("uptitudeTestLink");
-
-
-}
 
 

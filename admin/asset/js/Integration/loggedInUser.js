@@ -53,7 +53,7 @@ async function loggedInUser(){
             text-align: center;
             padding-top: 20px;
             color: white;
-            Height: 500px;
+            height: 250px;
         }
         
         a.ManageAccountLink{
@@ -196,22 +196,6 @@ async function loggedInUser(){
 
           <h3 style="display: table; margin-left: 43px;">${fetchedData.firstName} ${fetchedData.lastName}</h3>
           <p class="userFetchedEmail" style="font-weight: 500;">${fetchedData.email}</p>
-          <a href="userProfile.html" class="ManageAccountLink" id="ManageAccountLink">Edit profile</a>
-          <br><br>
-
-          <div class="switchAccount" style=" padding: 30px 50px 58px 50px;">
-                <p class="switchAccountLink" id="switchAccountLink"> 
-                <img src="images/menu-icon/flag.png" title="" alt="">
-                Find Profiles
-                </p>
-                <a href="../admin/dashboard.html" class="switchAccountLink" id="adminPanel"> 
-                Admin Panel
-                </a>
-          </div>
-
-          <div class="preNavLogin" style="border-top: 1px solid white;">
-              <h5><a onClick="preNavLogoutUser()">Logout</a></h5>
-          </div>
       </div>
       
 

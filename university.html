@@ -13,13 +13,12 @@
 <!-- Favicon -->
 	<link href="images/header/fav.jpg" rel="shortcut icon" type="image/x-icon"/>
 
-    <title>University Social Network | Post </title>
+    <title>University Social Network | Home </title>
 
     <!-- Bootstrap core CSS-->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	    <link href="css/style.css" rel="stylesheet">
 	    <link href="css/responsive.css" rel="stylesheet">
-	    <link href="css/create.css" rel="stylesheet">
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
@@ -61,7 +60,7 @@
 			</div>
 		</div>
 			<div class="col-md-5 col-xs-12 p-left p-right">
-			 <div class="add-listing">
+			 <div class="add-listing" id="addListing">
 				<a href="upload.html">
 				<img src="images/header/plus-ico.png" alt="">
 				Create a post</a>
@@ -155,74 +154,43 @@
 			 <!--#Home-->
 			 <div class="login popup" id="preNavLogin"><a href="signin.html" class="LoginSignUpLink" >Login / SignUp</a> </div>
 			 <div class="login popup" id="addProfile"></div>
-				
-			
-				
-			 </div>
+			 
 			</div>
     </nav>
     <div id="wrapper">
       <!-- Sidebar -->
-	  <ul class="sidebar navbar-nav" id='hideUserProfile'>
-		<li class="nav-item active">
-		<a href="index.html"><img src="images/menu-icon/Homeicon.png" title="" alt=""> <div class="fos" id="foo">Home</div></a></li>
-		<li><a href="listing.html"><img src="images/menu-icon/Categoryicon.png" title="" alt=""><div class="fos" id="foo1"> Posts </div> </a></li>
-		<li><a href="find_profiles.html"><img src="images/menu-icon/flag.png" title="" alt=""> <div class="fos" id="foo2">Find Profiles</div></a></li>
-		<li class="mpadding"><a href="message.html"><img src="images/menu-icon/message.png" title="" alt=""><div class="fos" id="foo3"> Messages</div></a></li>
-		
-		<li><a href="opportunity.html"> <img src="images/listing/sell.png" title="" alt=""><div class="fos" id="foo4">Opportunities</div></a></li>
-		<li> <a href="events.html"> <img src="images/listing/mob.png" title="" alt=""><div class="fos" id="foo5">Events</div></a></li>
-		<li> <a href="university.html"><img src="images/listing/place.png" title="" alt=""><div class="fos" id="foo6">Universities</div></a></li>
-		<li class="mpadding"><a href="news.html"><img src="images/listing/search.png" title="" alt=""> <div class="fos" id="foo7">News</div></a></li>
-		
-		<li> <a href="other.html"><img src="images/listing/Electronic.png" title="" alt=""><div class="fos" id="foo8">Others</div></a></li>
-		
-	  </ul>
+      <ul class="sidebar navbar-nav" id='hideUserProfile'>
+        <li class="nav-item active">
+        <a href="index.html"><img src="images/menu-icon/Homeicon.png" title="" alt=""> <div class="fos" id="foo">Home</div></a></li>
+        <li><a href="listing.html"><img src="images/menu-icon/Categoryicon.png" title="" alt=""><div class="fos" id="foo1"> Posts </div> </a></li>
+        <li><a href="find_profiles.html"><img src="images/menu-icon/flag.png" title="" alt=""> <div class="fos" id="foo2">Find Profiles</div></a></li>
+        <li class="mpadding"><a href="message.html"><img src="images/menu-icon/message.png" title="" alt=""><div class="fos" id="foo3"> Messages</div></a></li>
+        
+        <li><a href="opportunity.html"> <img src="images/listing/sell.png" title="" alt=""><div class="fos" id="foo4">Opportunities</div></a></li>
+        <li> <a href="events.html"> <img src="images/listing/mob.png" title="" alt=""><div class="fos" id="foo5">Events</div></a></li>
+        <li> <a href="university.html"><img src="images/listing/place.png" title="" alt=""><div class="fos" id="foo6">Universities</div></a></li>
+        <li class="mpadding"><a href="news.html"><img src="images/listing/search.png" title="" alt=""> <div class="fos" id="foo7">News</div></a></li>
+        
+        <li> <a href="other.html"><img src="images/listing/Electronic.png" title="" alt=""><div class="fos" id="foo8">Others</div></a></li>
+        
+      </ul>
 		<div id="content-wrapper">
-			<div class="container-fluid">
-			 <!-- Banner -->
-			
-            <!-- PALETTE #292f36 #4ecdc4 #ffffff #ff6b6b #22272D #262B32 -->
+			<div class="container-fluid" id='hideUserProfile'>
+	<div class="tabby" id='hideUserProfile'>
 
-                <div class="wrapper"> 
-                    <div class="col-lg-12 page-main">
-                    <div class="new-post">
-                        <h2 style="color: black; text-align: center;">Create a Post</h2>
-                        <form action="" id="opportunityForm">  
-                        <label for="" style="color: black; padding-top: 15px;">Title:</label>
-                        <input type="text" class="title-input" placeholder="Post title" id="opportunityTitle" name="title" />
-						<label for="" style="color: black; padding-top: 15px;">Post's Category:</label>
-                        <select name="category" id="opportunityCategory" style="color: black;" class="title-input">
-							<option value="" style="color: black;">Opportunities</option>
-							<option value="" style="color: black;">Events</option>
-							<option value="" style="color: black;">Universities</option>
-							<option value="" style="color: black;">News</option>
-							<option value="" style="color: black;">Others</option>
-						</select>
-						<label for="" style="color: black; padding-top: 15px;">Related Faculty:</label>
-                        <select name="faculty" id="opportunityFaculty" style="color: black;" class="title-input">
-							<option value="" style="color: black;">IT</option>
-							<option value="" style="color: black;">Business</option>
-						</select>
-                        <label for="" style="color: black; padding-top: 15px;">Post's Picture:</label>
-                        <input type="file" class="title-input" id="opportunityPostPicture" name="post"/>
-                        <label for="" style="color: black; padding-top: 15px;">Body:</label>
-                        <textarea id="opportunityBody" class="post-area" name="body">
-                        </textarea>
-                        <label for="" style="color: black; padding-top: 15px;">Author's name:</label>
-                        <input type="text" class="title-input" placeholder="Author's name" id="opportunityAuthorName" name="authorName" />
-                        <label for="" style="color: black; padding-top: 15px;">Author's Picture:</label>
-                        <input type="file" class="title-input"  id="opportunityAuthorPicture" name="author"/>
-                        <div id="opportunityMessage" style="padding-top: 15px;"></div>
-                        <button id="opportunitySubmitData" class="add-btn" style="margin-top: 40px;"><i class="fa fa-plus"></i> Add Post</button>
-                    </form>
-                    </div>
-                    
-                    </div>  
-                    
-                </div>
+	
+	<div class="filterDiv Cars" id="Cars">
+		
+	 </div>
+	
+
+	
+</div>
 
 
+
+
+	<div class="clearfix"></div>
 			<!-- Sticky Footer -->
 			
 
@@ -299,7 +267,6 @@
 	 <script src="js/menurght.js"></script>
 	 <script src="js/crausal1.js"></script>
 	 <script src="js/dropdown.js"></script>
-	 <script src="js/create.js"></script>
 	     <!-- Demo scripts for this page-->
    	<script src="js/slick.min.js"></script>.
 	 <!-- Assect scripts for this page-->
@@ -309,20 +276,22 @@
     <script src="assets/js/app.js"></script>
 
 	<!-- Integratin scripts -->
-	<script src="js/Integration/login.js"></script>
 	<script src="js/Integration/loggedInUser.js"></script>
 	<script src="js/Integration/index.js"></script>
 	<script src="js/Integration/facebookLogin.js"></script>
 	<script src="js/Integration/githubLogin.js"></script>
 	<script src="js/Integration/googleLogin.js"></script>
-	<script src="js/Integration/socialMediaLogout.js"></script>
 	<script src="js/Integration/socialMediaProfile.js"></script>
 	<script src="js/Integration/forgotPassword.js"></script>
 	<script src="js/Integration/resetPassword.js"></script>
-	<script src="js/Integration/createPost.js"></script>
-
-
-    
+	<script src="js/Integration/userMediaProfile.js"></script>
+	<script src="js/Integration/fetchOpportunityPosts.js"></script>
+	<script src="js/Integration/fetchEventsPosts.js"></script>
+	<script src="js/Integration/fetchUniversitiesPosts.js"></script>
+	<script src="js/Integration/fetchNewsPosts.js"></script>
+	<script src="js/Integration/fetchOthersPosts.js"></script>
+	<script src="js/Integration/singlePost.js"></script>
+	<script src="js/Integration/socialMediaLogout.js"></script>
   </body>
 
 

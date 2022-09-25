@@ -9,6 +9,7 @@ async function registeredUsers(){
    
     const users = fetchedData.RegisteredUsers;
     console.log(users);
+   
     for(let i=0;i<users.length;i++){
 
         let usersArray = users[i];
@@ -19,17 +20,12 @@ async function registeredUsers(){
             image = nameAbbreviation 
         }
         else{
-            image = `<img src="http://localhost:5000/images/${usersArray.imageLink}" alt="" id="imagePicture">`
+            image = `<img src="http://localhost:5000/images/${usersArray.imageLink}" alt="" id="imagePicture" style="margin-top: -10px;">`
         }
 
         const name = usersArray.firstName +" "+usersArray.lastName;
-        let faculty
-        if(!usersArray.faculty){
-          faculty = "Not a student" 
-        }
-        else{
-          faculty = usersArray.faculty
-        }
+        const role = usersArray.role
+        const userId = usersArray._id
 
   const addUsers = document.getElementById("addUsers");
 
@@ -37,7 +33,7 @@ async function registeredUsers(){
 
   const usersTemplate = `
   <div class="col-md-3 col-xs-12 col-sm-6 p-left" >
-        <div class="mainbox" style="text-align: center; height: 300px">
+        <div class="mainbox" style="text-align: center; height: 320px;">
             <div class="imgbox" 
             style="
             background: black;
@@ -59,10 +55,10 @@ async function registeredUsers(){
             ${name}
             </div>
             <div class="leftBottomtext" id="leftBottomtext" style="dispay: block;">
-            ${faculty}
+            ${role}
             </div>
             <div class="righttext">
-                <a href="chat.html">Chat</a>
+                <a id="${userId}" onclick="getSingleUser('${userId}')" style="cursor: pointer;">Change Role</a>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -79,4 +75,8 @@ async function registeredUsers(){
 }
 
 registeredUsers()
+
+
+
+
 

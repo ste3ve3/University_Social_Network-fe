@@ -84,3 +84,14 @@ function login(){
     })
 
 }
+
+
+//Login as guest
+
+// function guest() {
+
+//     const randomToken = "adfasfasfasdjhfgjfghjdhgagasdsjhdj"
+//     sessionStorage.setItem("token", randomToken)
+//     location = "index.html"
+
+// }

@@ -1,13 +1,35 @@
 //Fetch posts
 
-async function fetchOpportunityPosts(){
+async function fetchOpportunityPosts(){ 
+
+    const getData = {
+        method: "GET",
+        headers: {"auth_token": JSON.parse(sessionStorage.getItem("token"))}
+    }
+
+    let postResponse = await fetch("http://localhost:5000/login/loggedInUser", getData)
+    const checkFetchedData = await postResponse.json()
+
+    let response
+
+    if(checkFetchedData.faculty === "Faculty of Business"){
+        response = await fetch("http://localhost:5000/getPostsByCategoryAndFaculty/Opportunities/Business")
+    }
+
+    else if(checkFetchedData.faculty === "Faculty of IT"){
+        response = await fetch("http://localhost:5000/getPostsByCategoryAndFaculty/Opportunities/IT")
+    }
+
+    else {
+        response = await fetch("http://localhost:5000/getPostsByCategory/Opportunities")        
+    }
         
-    let response = await fetch("http://localhost:5000/getPostsByCategory/Opportunities")
+    
     
     const allPosts = await response.json(); 
     const posts = allPosts.fetchedPost;
     console.log(posts);
-   
+    
     for(let i=0;i<posts.length;i++){
         let opportunities = document.getElementById("Places");
 
@@ -50,7 +72,7 @@ async function fetchOpportunityPosts(){
                 
             </div>
             <div class="box-heading3">
-                By ${authorName} <i class="fa pull-right fa-heart-o" aria-hidden="true"></i>
+                By ${authorName} <i aria-hidden="true"></i>
             </div>
         </div>
        
@@ -60,6 +82,11 @@ async function fetchOpportunityPosts(){
     }
     
         }
+
+    
+// Display related faculty posts    
+
+    
     }
 
 fetchOpportunityPosts();

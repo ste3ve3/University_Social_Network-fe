@@ -52,7 +52,7 @@ fetch('http://localhost:5000/createPost', UserRequestOptions,)
     if (opportunityFetchedData.postSuccess){
         opportunityMessage.style.color = "green"
         opportunityMessage.innerHTML = opportunityFetchedData.postSuccess
-        // setTimeout(()=>{opportunityForm.reset()}, 3000)
+        setTimeout(()=>{location = "index.html"}, 2000)
     }
 
     else if (opportunityFetchedData.validationError){

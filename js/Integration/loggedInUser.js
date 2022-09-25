@@ -194,7 +194,7 @@ async function loggedInUser(){
           </div>
           <img src="http://localhost:5000/images/${fetchedData.imageLink}" class="inProfileImage" id="inProfileImage" alt="">
 
-          <h3 style="display: table; margin-left: 43px;">${fetchedData.firstName} ${fetchedData.lastName}</h3>
+          <h3>${fetchedData.firstName} ${fetchedData.lastName}</h3>
           <p class="userFetchedEmail" style="font-weight: 500;">${fetchedData.email}</p>
           <a href="userProfile.html" class="ManageAccountLink" id="ManageAccountLink">Edit profile</a>
           <br><br>
@@ -228,6 +228,10 @@ async function loggedInUser(){
 
   const switchAccountLink = document.getElementById("switchAccountLink");
   if(fetchedData.role == "admin"){
+    switchAccountLink.style.display = "none";
+  }
+
+  if(fetchedData.role == "super admin"){
     switchAccountLink.style.display = "none";
   }
 
