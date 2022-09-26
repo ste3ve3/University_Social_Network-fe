@@ -18,7 +18,6 @@ signUpProfileSubmitData.addEventListener("click", (event) =>{
 function UpdateUser2(){
 
     const userTranscript = document.getElementById("userTranscript");
-    const transcriptImage = document.getElementById("transcriptImage");
     
     const formData = new FormData();
         formData.append("transcript", userTranscript.files[0]);
@@ -38,7 +37,6 @@ function UpdateUser2(){
     if (fetchedData.message){
         signUpProfileMessage.style.color = "green"
         signUpProfileMessage.innerHTML = fetchedData.message
-        transcriptImage.src = fetchedData.UpdatedUser.transcript
         console.log(fetchedData.UpdatedUser.transcript)
         setTimeout(()=>{location = "signupcover.html"}, 4000)
     }
