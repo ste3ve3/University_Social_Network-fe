@@ -29,9 +29,7 @@
 }
 body{
   font-family: 'Ubuntu', sans-serif;
-  background-image: url(images/homepage/homeImage.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
+  zoom: 120%;
 }
 /* Custom Scroll Bar CSS */
 ::-webkit-scrollbar {
@@ -377,11 +375,156 @@ section .button button:hover{
 
 
 }
+
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:50vh;
+    
+}
+
+.context h1{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+
+.area{
+    background: white;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:210vh;
+    background-image: url(images/white-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98%;
+    height: 100%;
+    
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+        
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+    
+
+}
         
       
    </style>
 <body>
-
+  <div class="area" >
+    <ul class="circles">
+     
   <!-- Move to up bottom -->
   <div class="scroll-button">
     <a href="#home"><i class="fas fa-arrow-up"></i></a>
@@ -391,13 +534,13 @@ section .button button:hover{
   <nav>
     <div class="navbar">
       <div class="logo"><a href="#">University Social Network.</a></div>
-      <ul class="menu">
+      <!-- <ul class="menu">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About Us</a></li>
         <div class="cancel-btn">
           <i class="fas fa-times"></i>
         </div>
-      </ul>
+      </ul> -->
     </div>
     <div class="menu-btn">
       <i class="fas fa-bars"></i>
@@ -427,15 +570,34 @@ section .button button:hover{
         <div class="left">
           <img src="images/header/mainPageImage.jpg" alt="Portfolio">
         </div>
-        <div class="right">
+        <div class="right" style="margin-left: 30px;">
           <div class="topic">Information is Power</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, porro veritatis pariatur, nobis voluptatem ipsum repellat nemo quisquam error reprehenderit recusandae odio vel, suscipit. Voluptas mollitia accusantium quaerat aspernatur labore dolorum placeat ipsa sint nam perspiciatis eos consectetur veritatis debitis, quis aliquam unde sed maiores sit! Hic molestiae optio iste iure earum amet nostrum quaerat facere quae veniam maiores harum iusto aperiam vel inventore illo voluptatibus voluptates quo impedit voluptatum error vitae, omnis praesentium? Aperiam nulla non, nesciunt fuga rem perferendis alias et, temporibus, distinctio culpa unde a laborum libero ducimus. Facilis veniam sit praesentium, voluptatibus sint maxime iusto eaque.</p>
+          <p>
+            An application that intends to provide a well-established web-based social network system between students and a recruiter.
+            Students will login into the system and see different opportunities based on their faculty. On this site there will be a lot of posts categorised in Opportunities, News, Universities, Places and Others. When creating a post the placement officer will have to select the category and related field of the 
+            post and the post will appear to students if and only if it matches their faculty. There are three roles in this system which are user, admin and super admin which have different access to the system. On each post a student will have an option to take an aptitude test which matches his faculty and the
+            results are collected by the admin who can be able to invite a student to an interview if he is satisfied with the results.
+          </p>
 
         </div>
       </div>
     </div>
   </section>
 
+                
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    
+</ul>       
+</div >
 
   <script>
 // Sticky Navigation Menu Js
