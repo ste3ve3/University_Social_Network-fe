@@ -26,7 +26,7 @@ function forgotPassword(){
         headers: new Headers({'Content-Type': 'application/json; charset=UTF-8'})
     }
 
-fetch("http://localhost:5000/login/forgotPassword", sendData)
+fetch("https://university-social-network-be.herokuapp.com/login/forgotPassword", sendData)
 .then(response => response.json())
 .then((forgotPasswordFetchedData)=>{
     console.log(forgotPasswordFetchedData)

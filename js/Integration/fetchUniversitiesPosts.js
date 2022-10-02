@@ -7,21 +7,21 @@ async function fetchEventsPosts(){
         headers: {"auth_token": JSON.parse(sessionStorage.getItem("token"))}
     }
 
-    let postResponse = await fetch("http://localhost:5000/login/loggedInUser", getData)
+    let postResponse = await fetch("https://university-social-network-be.herokuapp.com/login/loggedInUser", getData)
     const checkFetchedData = await postResponse.json()
 
     let response
 
     if(checkFetchedData.faculty === "Faculty of Business"){
-        response = await fetch("http://localhost:5000/getPostsByCategoryAndFaculty/Universities/Business")
+        response = await fetch("https://university-social-network-be.herokuapp.com/getPostsByCategoryAndFaculty/Universities/Business")
     }
 
     else if(checkFetchedData.faculty === "Faculty of IT"){
-        response = await fetch("http://localhost:5000/getPostsByCategoryAndFaculty/Universities/IT")
+        response = await fetch("https://university-social-network-be.herokuapp.com/getPostsByCategoryAndFaculty/Universities/IT")
     }
 
     else {
-        response = await fetch("http://localhost:5000/getPostsByCategory/Universities")        
+        response = await fetch("https://university-social-network-be.herokuapp.com/getPostsByCategory/Universities")        
     }
         
     

@@ -14,7 +14,7 @@ let getSinglePost= async(myKey) => {
 
 
 
-    let response = await fetch('http://localhost:5000/getSinglePost/'+myKey, getOptions)
+    let response = await fetch('https://university-social-network-be.herokuapp.com/getSinglePost/'+myKey, getOptions)
     const fetchSinglePost = await response.json();
     console.log(fetchSinglePost)
 
@@ -43,7 +43,7 @@ const getOptions = {
 
 
 
-let response = await fetch('http://localhost:5000/getSinglePost/'+postId, getOptions)
+let response = await fetch('https://university-social-network-be.herokuapp.com/getSinglePost/'+postId, getOptions)
 const fetchedPost = await response.json();
 console.log(fetchedPost)
 

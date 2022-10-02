@@ -48,7 +48,7 @@ const userYearOfStudy = document.getElementById("userYearOfStudy");
         headers: new Headers({'Content-Type': 'application/json; charset=UTF-8'})
     }
 
-fetch("http://localhost:5000/register/updateUser1", sendData)
+fetch("https://university-social-network-be.herokuapp.com/register/updateUser1", sendData)
 .then(response => response.json())
 .then((fetchedData)=>{
 console.log(fetchedData)

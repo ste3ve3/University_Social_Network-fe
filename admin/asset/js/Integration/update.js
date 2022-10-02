@@ -22,7 +22,7 @@ let deletePost= async(myKey) => {
 
 
 
-    let response = await fetch('http://localhost:5000/deletePost/'+myKey, deleteOptions)
+    let response = await fetch('https://university-social-network-be.herokuapp.com/deletePost/'+myKey, deleteOptions)
     const fetchDeletedPost = await response.json();
     console.log(fetchDeletedPost)
         if(fetchDeletedPost.deletedPost){ 
@@ -57,7 +57,7 @@ let getSinglePost= async(myKey) => {
 
 
 
-    let response = await fetch('http://localhost:5000/getSinglePost/'+myKey, getOptions)
+    let response = await fetch('https://university-social-network-be.herokuapp.com/getSinglePost/'+myKey, getOptions)
     const fetchSinglePost = await response.json();
     console.log(fetchSinglePost)
 

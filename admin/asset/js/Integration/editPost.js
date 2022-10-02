@@ -13,7 +13,7 @@ const getOptions = {
 
 
 
-let response = await fetch('http://localhost:5000/getSinglePost/'+myKey, getOptions)
+let response = await fetch('https://university-social-network-be.herokuapp.com/getSinglePost/'+myKey, getOptions)
 const fetchedPost = await response.json();
 console.log(fetchedPost)
 
@@ -88,7 +88,7 @@ function updatePost() {
         headers: {'auth-token': JSON.parse(sessionStorage.getItem('token'))},
      };
      
-fetch('http://localhost:5000/updatePost/'+myKey, UserRequestOptions,)
+fetch('https://university-social-network-be.herokuapp.com/updatePost/'+myKey, UserRequestOptions,)
 .then(response => response.json())
 .then((postFetchedData)=>{
     console.log(postFetchedData)

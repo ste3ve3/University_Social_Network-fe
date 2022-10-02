@@ -4,7 +4,7 @@ async function users(){
         headers: {"auth_token": JSON.parse(sessionStorage.getItem("token"))}
     }
 // Registered Users
-  let response = await fetch("http://localhost:5000/register/getRegisteredUsers", getData)
+  let response = await fetch("https://university-social-network-be.herokuapp.com/register/getRegisteredUsers", getData)
   const fetchedData = await response.json()
    
     const users = fetchedData.RegisteredUsers;
@@ -13,7 +13,7 @@ async function users(){
     countUsers.innerHTML = users.length;
 
 // Number of posts
-let postsResponse = await fetch("http://localhost:5000/getAllPosts", getData)
+let postsResponse = await fetch("https://university-social-network-be.herokuapp.com/getAllPosts", getData)
     const postsFetchedData = await postsResponse.json()
 
     const posts = postsFetchedData.availabePosts;

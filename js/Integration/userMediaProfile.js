@@ -4,7 +4,7 @@ async function UserProfile(){
         headers: new Headers({'Content-Type': 'application/json; charset=UTF-8'})
     }
   
-  let response = await fetch("http://localhost:5000/socialMediaLoggedInUser", getData)
+  let response = await fetch("https://university-social-network-be.herokuapp.com/socialMediaLoggedInUser", getData)
   const profileMediaFetchedData = await response.json()
   console.log(profileMediaFetchedData)
   
@@ -171,7 +171,7 @@ async function UserProfile(){
       headers: new Headers({'Content-Type': 'application/json; charset=UTF-8'})
   }
   
-  fetch("http://localhost:5000/socialMediaUpdateUser", sendData)
+  fetch("https://university-social-network-be.herokuapp.com/socialMediaUpdateUser", sendData)
   .then(response => response.json())
   .then((fetchedData)=>{
   console.log(fetchedData)

@@ -4,7 +4,7 @@ async function UserProfile(){
       headers: {"auth_token": JSON.parse(sessionStorage.getItem("token"))}
   }
 
-let response = await fetch("http://localhost:5000/login/loggedInUser", getData)
+let response = await fetch("https://university-social-network-be.herokuapp.com/login/loggedInUser", getData)
 const profileFetchedData = await response.json()
 
 
@@ -20,7 +20,7 @@ const profileImageLinkLeft = document.getElementById("profileImageLinkLeft")
 ImageDiv.innerHTML = profileFetchedData.firstName.charAt(0) +""+ profileFetchedData.lastName.charAt(0)
 
 if (profileFetchedData.imageLink) {
-profileImageLinkLeft.src = `http://localhost:5000/images/${profileFetchedData.imageLink}`
+profileImageLinkLeft.src = `https://university-social-network-be.herokuapp.com/images/${profileFetchedData.imageLink}`
 ImageDiv.style.display = "none"
 }
 
@@ -109,7 +109,7 @@ const profileImageLink = document.getElementById("profileImageLink")
 profilePicRight.innerHTML = profileFetchedData.firstName.charAt(0) +""+ profileFetchedData.lastName.charAt(0)
 
 if (profileFetchedData.imageLink) {
-profileImageLink.src = `http://localhost:5000/images/${profileFetchedData.imageLink}`
+profileImageLink.src = `https://university-social-network-be.herokuapp.com/images/${profileFetchedData.imageLink}`
 profilePicRight.style.display = "none"
 }
 
@@ -246,7 +246,7 @@ const sendData = {
     headers: new Headers({"auth_token": JSON.parse(sessionStorage.getItem("token"))})
 }
 
-fetch("http://localhost:5000/login/updateUser", sendData)
+fetch("https://university-social-network-be.herokuapp.com/login/updateUser", sendData)
 .then(response => response.json())
 .then((fetchedData)=>{
 console.log(fetchedData)
