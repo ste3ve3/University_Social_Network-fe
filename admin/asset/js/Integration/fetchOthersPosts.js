@@ -2,7 +2,7 @@
 
 async function fetchEventsPosts(){
         
-    let response = await fetch("https://university-social-network-be.herokuapp.com/getPostsByCategory/Others")
+    let response = await fetch("http://localhost:5000/getPostsByCategory/Others")
     
     const allPosts = await response.json(); 
     const posts = allPosts.fetchedPost;

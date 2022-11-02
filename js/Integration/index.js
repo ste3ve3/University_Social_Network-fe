@@ -8,7 +8,7 @@ async function checkLoggedInUser(){
         headers: {"auth_token": JSON.parse(sessionStorage.getItem("token"))}
     }
 
-  let response = await fetch("https://university-social-network-be.herokuapp.com/login/loggedInUser", getData)
+  let response = await fetch("http://localhost:5000/login/loggedInUser", getData)
   const checkFetchedData = await response.json()
   console.log(checkFetchedData)
 
@@ -30,7 +30,7 @@ if(checkFetchedData.faculty === "Faculty of Business"){
     const uptitudeTestLink = document.getElementById("uptitudeTestLink");  
     uptitudeTestLink.href = "uptitudeTestBusiness.html"
 
-    let responseIT = await fetch("https://university-social-network-be.herokuapp.com/getPostsByFaculty/IT")
+    let responseIT = await fetch("http://localhost:5000/getPostsByFaculty/IT")
   const allPosts = await responseIT.json();
   const facultyITPosts = allPosts.fetchedPost;
     console.log(facultyITPosts)
@@ -41,7 +41,7 @@ if(checkFetchedData.faculty === "Faculty of IT"){
     const uptitudeTestLink = document.getElementById("uptitudeTestLink");  
     uptitudeTestLink.href = "uptitudeTestIT.html"
 
-    let response = await fetch("https://university-social-network-be.herokuapp.com/getPostsByFaculty/Business")
+    let response = await fetch("http://localhost:5000/getPostsByFaculty/Business")
     
     const allPosts = await response.json(); 
     const facultyPosts = allPosts.fetchedPost;
@@ -69,7 +69,7 @@ async function socialIndexLoggedInUser(){
         headers: new Headers({'Content-Type': 'application/json; charset=UTF-8'})
     }
 
-  let response = await fetch("https://university-social-network-be.herokuapp.com/socialMediaLoggedInUser", getData)
+  let response = await fetch("http://localhost:5000/socialMediaLoggedInUser", getData)
   const fetchedData = await response.json()
   console.log(fetchedData)
 
@@ -97,12 +97,12 @@ async function continueToBlog(){
         headers: {"auth_token": JSON.parse(sessionStorage.getItem("token"))}
     }
 
-  let response = await fetch("https://university-social-network-be.herokuapp.com/login/loggedInUser", getData)
+  let response = await fetch("http://localhost:5000/login/loggedInUser", getData)
   const checkFetchedData = await response.json()
 
 //current post
 const postId = localStorage.getItem("postId")
-let postResponse = await fetch('https://university-social-network-be.herokuapp.com/getSinglePost/'+postId, getData)
+let postResponse = await fetch('http://localhost:5000/getSinglePost/'+postId, getData)
 const fetchedPost = await postResponse.json();
 const singlePost = fetchedPost.fetchedPost;
      
@@ -124,7 +124,7 @@ console.log(result)
         headers: new Headers({'Content-Type': 'application/json; charset=UTF-8'})
     }
 
-fetch("https://university-social-network-be.herokuapp.com/saveTestResult", sendData)
+fetch("http://localhost:5000/saveTestResult", sendData)
 .then(response => response.json())
 .then((fetchedData)=>{
     console.log(fetchedData)  
@@ -136,4 +136,7 @@ location = "singlePost.html"
 
 
 
+//chats
 
+const chats = document.getElementById("chats")
+chats.innerHTML = `<iframe src="http://localhost:5000/chat" title="W3Schools Free Online Web Tutorials"></iframe>`

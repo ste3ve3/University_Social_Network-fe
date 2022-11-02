@@ -2,7 +2,7 @@
 
 async function fetchRegisteredUsers(){
         
-    let response = await fetch("https://university-social-network-be.herokuapp.com/register/getRegisteredUsers")
+    let response = await fetch("http://localhost:5000/register/getRegisteredUsers")
     
     const allUsers = await response.json(); 
     const users = allUsers.RegisteredUsers;

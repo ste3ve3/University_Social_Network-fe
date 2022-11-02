@@ -2,7 +2,7 @@
 
 async function fetchOpportunityPosts(){
         
-    let response = await fetch("https://university-social-network-be.herokuapp.com/getPostsByCategory/Opportunities")
+    let response = await fetch("http://localhost:5000/getPostsByCategory/Opportunities")
     
     const allPosts = await response.json(); 
     const posts = allPosts.fetchedPost;

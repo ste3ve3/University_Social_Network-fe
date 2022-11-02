@@ -29,7 +29,7 @@ function UpdateUser2(){
             headers: new Headers({})
         }
     
-    fetch("https://university-social-network-be.herokuapp.com/register/updateUser2", sendData)
+    fetch("http://localhost:5000/register/updateUser2", sendData)
     .then(response => response.json())
     .then((fetchedData)=>{
     console.log(fetchedData)

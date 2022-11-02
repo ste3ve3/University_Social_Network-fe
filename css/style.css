@@ -3510,3 +3510,12 @@ border-radius: 20%;
   }
 }
 
+
+iframe{
+  width: 1150px;
+  height: 500px;
+}
+
+div.chats{
+  margin-top: 50px;
+}

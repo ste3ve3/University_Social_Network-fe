@@ -12,7 +12,7 @@ let deleteResult= async(myKey) => {
        },
     }
 
-    let response = await fetch('https://university-social-network-be.herokuapp.com/deleteResult/'+myKey, deleteOptions)
+    let response = await fetch('http://localhost:5000/deleteResult/'+myKey, deleteOptions)
     const fetchDeletedPost = await response.json();
     console.log(fetchDeletedPost)
         if(fetchDeletedPost.deletedResult){ 
@@ -29,7 +29,7 @@ async function fetchResults(){
     const invitationMessage = document.getElementById("invitationMessage");
     invitationMessage.style.display = "none";
         
-    let response = await fetch("https://university-social-network-be.herokuapp.com/getAllResults")
+    let response = await fetch("http://localhost:5000/getAllResults")
     
     const allResults = await response.json(); 
     const results = allResults.testResults;
@@ -104,7 +104,7 @@ let sendInvitation= async(myKey) => {
        },
     }
 
-    let response = await fetch('https://university-social-network-be.herokuapp.com/sendInvitation/'+myKey, deleteOptions)
+    let response = await fetch('http://localhost:5000/sendInvitation/'+myKey, deleteOptions)
     const fetchInvitationPost = await response.json();
     console.log(fetchInvitationPost)
         

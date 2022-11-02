@@ -4,7 +4,7 @@ async function registeredUsers(){
         headers: {"auth_token": JSON.parse(sessionStorage.getItem("token"))}
     }
 
-  let response = await fetch("https://university-social-network-be.herokuapp.com/register/getRegisteredUsers", getData)
+  let response = await fetch("http://localhost:5000/register/getRegisteredUsers", getData)
   const fetchedData = await response.json()
    
     const users = fetchedData.RegisteredUsers;
@@ -20,7 +20,7 @@ async function registeredUsers(){
             image = nameAbbreviation 
         }
         else{
-            image = `<img src="https://university-social-network-be.herokuapp.com/images/${usersArray.imageLink}" alt="" id="imagePicture" style="margin-top: -10px;">`
+            image = `<img src="http://localhost:5000/images/${usersArray.imageLink}" alt="" id="imagePicture" style="margin-top: -10px;">`
         }
 
         const name = usersArray.firstName +" "+usersArray.lastName;

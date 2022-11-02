@@ -32,7 +32,7 @@ const userPhoneNumber = document.getElementById("userPhoneNumber");
         headers: new Headers({'Content-Type': 'application/json; charset=UTF-8'})
     }
 
-fetch("https://university-social-network-be.herokuapp.com/register/updateUser3", sendData)
+fetch("http://localhost:5000/register/updateUser3", sendData)
 .then(response => response.json())
 .then((fetchedData)=>{
 console.log(fetchedData)

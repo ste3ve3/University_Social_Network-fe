@@ -40,7 +40,7 @@ function event() {
         headers: {'auth-token': JSON.parse(sessionStorage.getItem('token'))},
      };
      
-fetch('https://university-social-network-be.herokuapp.com/createPost', UserRequestOptions,)
+fetch('http://localhost:5000/createPost', UserRequestOptions,)
 .then(response => response.json())
 .then((eventFetchedData)=>{
     console.log(eventFetchedData)

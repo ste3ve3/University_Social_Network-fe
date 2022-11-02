@@ -4,7 +4,7 @@ async function loggedInUser(){
         headers: {"auth_token": JSON.parse(sessionStorage.getItem("token"))}
     }
 
-  let response = await fetch("https://university-social-network-be.herokuapp.com/login/loggedInUser", getData)
+  let response = await fetch("http://localhost:5000/login/loggedInUser", getData)
   const fetchedData = await response.json()
   console.log(fetchedData)
 
@@ -186,13 +186,13 @@ async function loggedInUser(){
       <div class="profilePicture" id="profilePicture">
         ${fetchedData.firstName.charAt(0)}${fetchedData.lastName.charAt(0)}
       </div>
-      <img src="https://university-social-network-be.herokuapp.com/images/${fetchedData.imageLink}" class="topProfileImage" id="topProfileImage" alt="">
+      <img src="http://localhost:5000/images/${fetchedData.imageLink}" class="topProfileImage" id="topProfileImage" alt="">
           
       <div class="userProfile" id="userProfile">
           <div class="profilePictureIn" id="profilePictureIn">
           ${fetchedData.firstName.charAt(0)}${fetchedData.lastName.charAt(0)}
           </div>
-          <img src="https://university-social-network-be.herokuapp.com/images/${fetchedData.imageLink}" class="inProfileImage" id="inProfileImage" alt="">
+          <img src="http://localhost:5000/images/${fetchedData.imageLink}" class="inProfileImage" id="inProfileImage" alt="">
 
           <h3>${fetchedData.firstName} ${fetchedData.lastName}</h3>
           <p class="userFetchedEmail" style="font-weight: 500;">${fetchedData.email}</p>
@@ -201,8 +201,8 @@ async function loggedInUser(){
 
           <div class="switchAccount" style=" padding: 30px 50px 58px 50px;">
                 <p class="switchAccountLink" id="switchAccountLink" onclick ="findProfile()"> 
-                <img src="images/menu-icon/flag.png" title="" alt="">
-                Find Profiles
+                <img src="images/menu-icon/message.png" title="" alt="">
+                Join Group Chat
                 </p>
                 <a href="../admin/dashboard.html" class="switchAccountLink" id="adminPanel"> 
                 Admin Panel
@@ -310,5 +310,5 @@ const topRightLogin = document.getElementById("addProfile")
 }
 
 function findProfile(){
-    location = "find_profiles.html"
+    location = "chat.html"
    }
