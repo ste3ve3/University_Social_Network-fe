@@ -46,14 +46,13 @@ async function loggedInUser(){
             background-color: #414A4C;
             border-radius: 10px;
             z-index: 3;
-            top: 65px;
-            right: 95px;
+            top: 60px;
+            right: 85px;
             width: 300px;
-            text-align: center;
             text-align: center;
             padding-top: 20px;
             color: white;
-            height: 250px;
+            
         }
         
         a.ManageAccountLink{
@@ -61,11 +60,10 @@ async function loggedInUser(){
             padding: 7px 15px;
             border-radius: 5px;
             color: black;
-            background: white;
+            border: 1px solid white;
         }
 
         a.ManageAccountLink:hover{
-            background: white;
             color: black;
             border: 2px solid black;
         }
@@ -73,24 +71,25 @@ async function loggedInUser(){
         div.profilePicture{
             background: black;
             color: white;
-            width: 50px;
-            height: 50px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
-            line-height: 50px;
+            line-height: 42px;
             font-weight: bold;
-            font-size: 18px;
+            font-size: 15px;
             cursor: pointer;
             text-align: center;
+            margin: 4px 0px 0px -70px;
         }
 
         img.topProfileImage{
             background: none;
-            width: 55px;
-            height: 55px;
+            width: 42px;
+            height: 42px;
             border-radius: 50%;
             cursor: pointer;
             text-align: center;
-           
+            margin: 4px 0px 0px -70px;
         }
 
         div.profilePictureIn{
@@ -112,7 +111,7 @@ async function loggedInUser(){
             width: 90px;
             height: 90px;
             border-radius: 50%;
-            margin-left: 100px;
+            margin-left: 10px;
             margin-bottom: 20px;
             cursor: pointer;
         }
@@ -154,16 +153,16 @@ async function loggedInUser(){
             padding: 7px 40px 7px 40px; 
             border-radius: 5px; 
             cursor: pointer; 
-            background: white;
             color: black;
         }
 
         a.switchAccountLink:hover{
-            background: white;
             color: black;
+            border: 1px solid black;
         }
+
         div.preNavLogin {
-           padding-top: 50px;
+           padding: 25px 0px;
         }
 
         div.preNavLogin h5 a{
@@ -171,32 +170,44 @@ async function loggedInUser(){
             border: 2px solid white;
             padding: 7px 15px;
             border-radius: 5px;
-            
             background: black;
         }
         
         div.preNavLogin h5 a:hover{
             border: 2px solid black;
+            cursor: pointer;
         }
 
 
       </style>
   </head>
   <body>
-      <div class="profilePicture" id="profilePicture">
-        ${fetchedData.firstName.charAt(0)}${fetchedData.lastName.charAt(0)}
-      </div>
-      <img src="http://localhost:5000/images/${fetchedData.imageLink}" class="topProfileImage" id="topProfileImage" alt="">
-          
-      <div class="userProfile" id="userProfile">
-          <div class="profilePictureIn" id="profilePictureIn">
-          ${fetchedData.firstName.charAt(0)}${fetchedData.lastName.charAt(0)}
-          </div>
-          <img src="http://localhost:5000/images/${fetchedData.imageLink}" class="inProfileImage" id="inProfileImage" alt="">
+  <div class="profilePicture" id="profilePicture">
+  ${fetchedData.firstName.charAt(0)}${fetchedData.lastName.charAt(0)}
+</div>
+<img src="http://localhost:5000/images/${fetchedData.imageLink}" class="topProfileImage" id="topProfileImage" alt="">
+    
+<div class="userProfile" id="userProfile">
+    <div class="profilePictureIn" id="profilePictureIn">
+    ${fetchedData.firstName.charAt(0)}${fetchedData.lastName.charAt(0)}
+    </div>
+    <img src="http://localhost:5000/images/${fetchedData.imageLink}" class="inProfileImage" id="inProfileImage" alt="">
 
-          <h3 style="display: table; margin-left: 43px;">${fetchedData.firstName} ${fetchedData.lastName}</h3>
-          <p class="userFetchedEmail" style="font-weight: 500;">${fetchedData.email}</p>
-      </div>
+    <h3>${fetchedData.firstName} ${fetchedData.lastName}</h3>
+    <p class="userFetchedEmail" style="font-weight: 500;">${fetchedData.email}</p>
+    <a href="../HTML/userProfile.html" class="ManageAccountLink" id="ManageAccountLink">Edit profile</a>
+    <br><br>
+
+    <div class="switchAccount" style=" padding: 30px 50px 58px 50px;">
+          <a href="../admin/dashboard.html" class="switchAccountLink" id="adminPanel"> 
+          Admin Panel
+          </a>
+    </div>
+
+    <div class="preNavLogin" style="border-top: 1px solid white;">
+        <h5><a onClick="preNavLogoutUser()">Logout</a></h5>
+    </div>
+</div>
       
 
   </body>
@@ -210,15 +221,6 @@ async function loggedInUser(){
   const myFooterCopyRight = document.getElementById ("myFooterCopyRight");
   const profilePictureIn = document.getElementById("profilePictureIn");
 
-  const switchAccountLink = document.getElementById("switchAccountLink");
-  if(fetchedData.role == "admin"){
-    switchAccountLink.style.display = "none";
-  }
-
-  const adminPanel = document.getElementById("adminPanel");
-  if(fetchedData.role == "user"){
-    adminPanel.style.display = "none";
-  }
 
 
 
@@ -290,7 +292,7 @@ loggedInUser()
 
 function preNavLogoutUser(){
     sessionStorage.removeItem("token")
-    location = "index.html"
+    location = "../HTML/index.html"
   }
 
 const token = sessionStorage.getItem("token")

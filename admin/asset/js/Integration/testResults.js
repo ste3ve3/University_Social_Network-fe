@@ -21,6 +21,34 @@ let deleteResult= async(myKey) => {
     
 }
 
+// Send Invitation
+
+let sendInvitation= async(myKey) => {
+    invitationMessage.style.display = "block";   
+    invitationMessage.innerHTML = `<img src="../images/Spinner.gif" alt="Loading..." width="50px" height="50px">`
+
+    invitationMessage.style.color = "green";
+    setTimeout(()=>{invitationMessage.innerHTML = "Invitation Sent Successfully!"}, 3000)
+    setTimeout(()=>{location = "testResults.html"}, 5000)
+    
+    const deleteOptions = {
+    
+        method: 'GET',
+        headers: {
+        
+         'auth-token': JSON.parse(sessionStorage.getItem('token'))
+     
+       },
+    }
+
+    let response = await fetch('http://localhost:5000/sendInvitation/'+myKey, deleteOptions)
+    const fetchInvitationPost = await response.json();
+    console.log(fetchInvitationPost)
+        
+        
+    
+}
+
 
 // Get results
 
@@ -84,31 +112,5 @@ fetchResults();
 
 
 
-// Send Invitation
 
-let sendInvitation= async(myKey) => {
-    invitationMessage.style.display = "block";   
-    invitationMessage.innerHTML = `<img src="../images/Spinner.gif" alt="Loading..." width="50px" height="50px">`
-
-    invitationMessage.style.color = "green";
-    setTimeout(()=>{invitationMessage.innerHTML = "Invitation Sent Successfully!"}, 3000)
-    setTimeout(()=>{location = "testResults.html"}, 5000)
-    
-    const deleteOptions = {
-    
-        method: 'GET',
-        headers: {
-        
-         'auth-token': JSON.parse(sessionStorage.getItem('token'))
-     
-       },
-    }
-
-    let response = await fetch('http://localhost:5000/sendInvitation/'+myKey, deleteOptions)
-    const fetchInvitationPost = await response.json();
-    console.log(fetchInvitationPost)
-        
-        
-    
-}
 

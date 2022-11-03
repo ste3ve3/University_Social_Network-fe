@@ -174,10 +174,10 @@ async function socialMediaLoggedInUser(){
           <br><br>
 
           <div class="switchAccount" style=" padding: 30px 50px 58px 50px;">
-                <p class="switchAccountLink"> 
-                <img src="images/menu-icon/flag.png" title="" alt="">
-                Find Profiles
-                </p>
+          <p class="switchAccountLink" id="switchAccountLink" onclick ="findProfile()"> 
+          <img src="../images/menu-icon/message.png" title="" alt="">
+          Join Group Chat
+          </p>
           </div>
 
           <div class="preNavLogin" style="border-top: 1px solid #cba10a;">
@@ -201,7 +201,10 @@ async function socialMediaLoggedInUser(){
         const preNavLogin = document.getElementById("preNavLogin");
         preNavLogin.style.display = "none"
 
-
+        function findProfile(){
+            location = "chat.html"
+           }
+           
         UserProfile.style.display = "none";
 
         UserProfilePicture.addEventListener("click", ()=>{
@@ -220,13 +223,7 @@ async function socialMediaLoggedInUser(){
         UserProfile.style.display = "none"
         })
 
-        // myProfile.addEventListener("click", ()=>{
-        // UserProfile.style.display = "none"
-        // })
-
-        // myFooterCopyRight.addEventListener("click", ()=>{
-        // UserProfile.style.display = "none"
-        // })
+        
 }
 
 

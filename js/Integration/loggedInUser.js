@@ -89,8 +89,7 @@ async function loggedInUser(){
             height: 55px;
             border-radius: 50%;
             cursor: pointer;
-            text-align: center;
-           
+            text-align: center; 
         }
 
         div.profilePictureIn{
@@ -109,11 +108,11 @@ async function loggedInUser(){
 
         img.inProfileImage{
             background: none;
-            width: 90px;
-            height: 90px;
+            width: 110px;
+            height: 110px;
             border-radius: 50%;
-            margin-left: 100px;
-            margin-bottom: 20px;
+            margin-left: 120px;
+            margin-bottom: 10px;
             cursor: pointer;
         }
 
@@ -201,7 +200,7 @@ async function loggedInUser(){
 
           <div class="switchAccount" style=" padding: 30px 50px 58px 50px;">
                 <p class="switchAccountLink" id="switchAccountLink" onclick ="findProfile()"> 
-                <img src="images/menu-icon/message.png" title="" alt="">
+                <img src="../images/menu-icon/message.png" title="" alt="">
                 Join Group Chat
                 </p>
                 <a href="../admin/dashboard.html" class="switchAccountLink" id="adminPanel"> 
