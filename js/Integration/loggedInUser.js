@@ -43,7 +43,7 @@ async function loggedInUser(){
         
         div.userProfile{
             position: fixed;
-            background-color: #414A4C;
+            background-image: url(../images/background4.jpg);
             border-radius: 10px;
             z-index: 3;
             top: 65px;
@@ -111,12 +111,14 @@ async function loggedInUser(){
             width: 110px;
             height: 110px;
             border-radius: 50%;
-            margin-left: 120px;
+            margin-left: 99px;
             margin-bottom: 10px;
             cursor: pointer;
         }
 
-        
+        h3.names{
+            display: table;
+        }
 
         div.profilePictureIn:hover{
             background: black;
@@ -193,7 +195,7 @@ async function loggedInUser(){
           </div>
           <img src="http://localhost:5000/images/${fetchedData.imageLink}" class="inProfileImage" id="inProfileImage" alt="">
 
-          <h3>${fetchedData.firstName} ${fetchedData.lastName}</h3>
+          <h3 class="names" id="names">${fetchedData.firstName} ${fetchedData.lastName}</h3>
           <p class="userFetchedEmail" style="font-weight: 500;">${fetchedData.email}</p>
           <a href="userProfile.html" class="ManageAccountLink" id="ManageAccountLink">Edit profile</a>
           <br><br>
@@ -224,6 +226,7 @@ async function loggedInUser(){
   const myProfile = document.getElementById("myProfile");
   const myFooterCopyRight = document.getElementById ("myFooterCopyRight");
   const profilePictureIn = document.getElementById("profilePictureIn");
+  const names = document.getElementById("names");
 
   const switchAccountLink = document.getElementById("switchAccountLink");
   if(fetchedData.role == "admin"){
@@ -258,12 +261,13 @@ async function loggedInUser(){
   if (fetchedData.imageLink) {
       UserProfilePicture.style.display = "none"
       profilePictureIn.style.display = "none"
+      names.style.marginLeft = "46px"
   }
 
-  
   else{
       topProfileImage.style.display = "none"
       inProfileImage.style.display = "none"
+      names.style.marginLeft = "33px"
   }
 
 
@@ -291,7 +295,9 @@ async function loggedInUser(){
   UserProfile.style.display = "none"
   })
 
-
+  if(fetchedData.email == "Guest"){
+    names.style.marginLeft = "91px"
+  }
 }
 
 loggedInUser()

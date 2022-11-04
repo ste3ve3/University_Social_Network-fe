@@ -36,6 +36,20 @@ overflow-x: hidden;
 font-weight: 400;
 background: #f3f3f3;
 margin:0 auto;
+overflow: overlay;
+}
+body::-webkit-scrollbar {
+  width: 11px;
+  background-color: transparent;
+}
+ 
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-image: url(../images/background4.jpg);
+  border-radius: 2px;
 }
 ol, ul {
 list-style: none;
@@ -1595,7 +1609,7 @@ padding: 50px;
   align-items: center;
 }
 .bg-form {
-background: white;
+  
 box-shadow: 0.1px 1px 13px grey;
 border-radius: 5px;
 padding:30px;
@@ -3087,7 +3101,7 @@ width: 100%;
 position: -webkit-sticky;
 position: sticky;
 top: 0;
-background: #fff!important;
+background-image: url(../images/background5.jpg)!important;
 -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.20);
 -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.20);
 -ms-box-shadow: 0 2px 6px rgba(0,0,0,0.20);
@@ -3251,7 +3265,7 @@ div.box-radius img{
   --footerBackgroundColor-gs-footer-one: rgb(6, 6, 6);
   --footerPadding-gs-footer-one: 30px;
   --footerHeader-Text-Color: white;
-  --footerBody-Text-Color: rgb(167, 167, 167);
+  --footerBody-Text-Color: rgb(239, 238, 238);
   --footerSocialBackgroundColor-gs-footer-one: #000;
   --transition-time-gs-footer-one: 0.3s;
 }
@@ -3259,7 +3273,7 @@ div.box-radius img{
 
 
 .gs-footerMainConatiner{
-  background-color: var(--footerBackgroundColor-gs-footer-one);
+  background-image: url(../images/background4.jpg);
 }
 
 .gs-footerMainConatiner .gs-footerDataContainer{
@@ -3311,7 +3325,7 @@ div.box-radius img{
 }
 
 .gs-footerMainConatiner .gs-footerDataContainer .gs-footerInnerContainer .gs-footBody .gs-links-list li a{
-  color: rgb(191, 190, 190);
+  color: rgb(239, 238, 238);
   font-size: 14px;
 }
 
@@ -3476,4 +3490,25 @@ iframe{
 
 div.chats{
   margin-top: 50px;
+}
+
+
+
+.backTranscript{
+  background: #34333c;
+  padding: 10px;
+  color: white;
+  border-radius: 2px;
+}
+
+.netxtTranscript{
+  background: #196acc;
+  padding: 10px;
+  color: white; 
+  border-color: #196acc;
+  border-radius: 2px;
+}
+
+.netxtTranscript:hover{
+  cursor: pointer;
 }

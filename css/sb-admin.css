@@ -22,12 +22,16 @@ body {
 #wrapper #content-wrapper {
   overflow-x: hidden;
   width: 100%;
- 
   padding-bottom: 80px;
+  background-image: url(../images/white-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 .navbar{
 	padding:0px 30px!important
+  
 }
+
 body.fixed-nav #content-wrapper {
   margin-top: 56px;
   padding-left: 90px;
@@ -94,6 +98,7 @@ body.fixed-nav.sidebar-toggled #content-wrapper {
 .z-1 {
   z-index: 1;
 }
+
 
 .navbar-nav .form-inline .input-group {
   width: 100%;
@@ -163,6 +168,7 @@ padding: 12px 0px 12px 0px;
   width: 90px !important;
  
   min-height: calc(100vh - 56px);
+  
 }
 
 .sidebar .nav-item:last-child {
@@ -213,7 +219,7 @@ padding: 12px 0px 12px 0px;
 @media (min-width: 768px) {
   .sidebar {
     width: 240px !important;
-   background: #000;
+    background-image: url(../images/background4.jpg);
        z-index: 1;
 	padding-top: 20px;
 	
