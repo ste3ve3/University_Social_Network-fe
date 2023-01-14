@@ -21,6 +21,10 @@ a:hover {
   font-weight: bold;
 }
 
+/* div.panel{
+  background-image: url(../../../images/backg);
+} */
+
 input:focus,
 textarea:focus {
   outline: none !important;
@@ -1952,8 +1956,10 @@ ul li a:focus {
 }
 
 
+
 #left-menu .sub-left-menu {
-  background-color: #fff;
+  background-image: url(../../../images/background4.jpg);
+  color: white;
   left: 0;
   padding-top: 50px;
   z-index: 222;
@@ -1969,7 +1975,7 @@ ul li a:focus {
 }
 
 #left-menu .sub-left-menu a {
-  color: #918C8C;
+  color: white;
   font-size: 16px;
   font-weight: 400;
   line-height: 42px;
@@ -2012,18 +2018,18 @@ ul li a:focus {
   font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 70px;
   text-align: center;
-  color: #918C8C;
+  color: white;
 }
 
 #left-menu .sub-left-menu .time p {
   margin-top: -20px;
   text-align: center;
   font-size: 12px;
-  color: #918C8C;
+  color: white;
 }
 
 #left-menu .sub-left-menu .tree {
-  background-color: #F6F8F8;
+  background-color: grey;
   padding: 0px;
   margin: 0px;
   border-top: 1px solid #ddd;

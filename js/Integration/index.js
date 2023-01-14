@@ -99,23 +99,23 @@ async function continueToBlog(){
 
   let response = await fetch("http://localhost:5000/login/loggedInUser", getData)
   const checkFetchedData = await response.json()
+  console.log(checkFetchedData)
 
 //current post
 const postId = localStorage.getItem("postId")
 let postResponse = await fetch('http://localhost:5000/getSinglePost/'+postId, getData)
 const fetchedPost = await postResponse.json();
 const singlePost = fetchedPost.fetchedPost;
-     
 
 //result container
 const result = document.getElementById('resultScore');
-console.log(result)
 
     const data = {
         name: checkFetchedData.firstName +" "+ checkFetchedData.lastName,
         email: checkFetchedData.email,
         testResult: result.innerHTML,
         postTitle: singlePost.title,
+        faculty: singlePost.faculty
     }
 
     const sendData = {
@@ -134,9 +134,14 @@ location = "singlePost.html"
 
 }
 
+continueToBlog()
+
 
 
 //chats
 
 const chats = document.getElementById("chats")
 chats.innerHTML = `<iframe src="http://localhost:5000/chat" title="W3Schools Free Online Web Tutorials"></iframe>`
+
+
+
